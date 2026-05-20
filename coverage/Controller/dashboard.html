@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/mielbreugelmans/IdeaProjects/2526-team-102/src/Controller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css?v=14.1.8" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css?v=14.1.8" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/Users/mielbreugelmans/IdeaProjects/2526-team-102/src</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Controller</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row dashboard-row">
+    <div class="col-md-6">
+     <h3>Classes</h3>
+     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
+     <div class="file-coverage-chart">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+ <style>
+  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
+  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
+  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
+  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
+  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
+  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
+  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
+  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
+ </style>
+ <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
+ <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
+ <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
+ <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
+ <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
+ <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
+ <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
+ <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
+ <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
+ <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
+ <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
+ <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
+ <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
+ <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
+ <line x1="60" y1="240.0" x2="780" y2="240.0" class="chart-grid"/>
+ <text x="52" y="240.0" text-anchor="end" dominant-baseline="middle" class="chart-label">50</text>
+ <line x1="60" y1="130.0" x2="780" y2="130.0" class="chart-grid"/>
+ <text x="52" y="130.0" text-anchor="end" dominant-baseline="middle" class="chart-label">100</text>
+ <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
+ <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">150</text>
+ <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
+ <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
+ <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
+ <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
+ <a href="HomeController.php.html#24"><circle cx="444.9" cy="83.8" r="20.0" class="bubble-warning"><title>App\Controller\HomeController — Coverage: 53.5% | Lines: 563 | Complexity: 121</title></circle></a>
+ <a href="TournamentController.php.html#21"><circle cx="722.9" cy="202.6" r="15.0" class="bubble-success"><title>App\Controller\TournamentController — Coverage: 92.1% | Lines: 315 | Complexity: 67</title></circle></a>
+ <a href="FieldsController.php.html#19"><circle cx="520.9" cy="218.0" r="13.7" class="bubble-warning"><title>App\Controller\FieldsController — Coverage: 64.0% | Lines: 264 | Complexity: 60</title></circle></a>
+ <a href="AdminFieldController.php.html#24"><circle cx="600.0" cy="235.6" r="12.9" class="bubble-warning"><title>App\Controller\AdminFieldController — Coverage: 75.0% | Lines: 236 | Complexity: 52</title></circle></a>
+ <a href="ClubController.php.html#15"><circle cx="621.8" cy="314.8" r="8.0" class="bubble-warning"><title>App\Controller\ClubController — Coverage: 78.0% | Lines: 91 | Complexity: 16</title></circle></a>
+ <a href="FriendsController.php.html#19"><circle cx="696.3" cy="306.0" r="7.8" class="bubble-warning"><title>App\Controller\FriendsController — Coverage: 88.4% | Lines: 86 | Complexity: 20</title></circle></a>
+ <a href="ProfileSettingsController.php.html#16"><circle cx="663.2" cy="290.6" r="7.3" class="bubble-warning"><title>App\Controller\ProfileSettingsController — Coverage: 83.8% | Lines: 74 | Complexity: 27</title></circle></a>
+ <a href="TeamsController.php.html#28"><circle cx="780.0" cy="314.8" r="7.2" class="bubble-success"><title>App\Controller\TeamsController — Coverage: 100.0% | Lines: 73 | Complexity: 16</title></circle></a>
+ <a href="MatchRequestController.php.html#16"><circle cx="60.0" cy="319.2" r="7.0" class="bubble-danger"><title>App\Controller\MatchRequestController — Coverage: 0.0% | Lines: 69 | Complexity: 14</title></circle></a>
+ <a href="NotificationsController.php.html#15"><circle cx="723.8" cy="314.8" r="6.7" class="bubble-success"><title>App\Controller\NotificationsController — Coverage: 92.2% | Lines: 64 | Complexity: 16</title></circle></a>
+ <a href="LoginController.php.html#26"><circle cx="664.3" cy="332.4" r="6.3" class="bubble-warning"><title>App\Controller\LoginController — Coverage: 83.9% | Lines: 56 | Complexity: 8</title></circle></a>
+ <a href="ProfileController.php.html#15"><circle cx="780.0" cy="328.0" r="5.0" class="bubble-success"><title>App\Controller\ProfileController — Coverage: 100.0% | Lines: 35 | Complexity: 10</title></circle></a>
+ <a href="ContactInfoController.php.html#9"><circle cx="780.0" cy="347.8" r="4.0" class="bubble-success"><title>App\Controller\ContactInfoController — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+</svg>
+     </div>
+    </div>
+    <div class="col-md-6 dashboard-column">
+     <h3>&nbsp;</h3>
+     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
+     <div class="scrollbox">
+<table class="table">
+ <thead>
+  <tr>
+   <th>Class</th>
+   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+   <th class="text-right">Coverage</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr><td><a href="HomeController.php.html#24">App\Controller\HomeController</a></td><td class="text-right">1596.53</td><td class="text-right">53.5%</td></tr>
+  <tr><td><a href="FieldsController.php.html#19">App\Controller\FieldsController</a></td><td class="text-right">227.75</td><td class="text-right">64.0%</td></tr>
+  <tr><td><a href="MatchRequestController.php.html#16">App\Controller\MatchRequestController</a></td><td class="text-right">210</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="AdminFieldController.php.html#24">App\Controller\AdminFieldController</a></td><td class="text-right">94.25</td><td class="text-right">75.0%</td></tr>
+  <tr><td><a href="TournamentController.php.html#21">App\Controller\TournamentController</a></td><td class="text-right">69.24</td><td class="text-right">92.1%</td></tr>
+  <tr><td><a href="ProfileSettingsController.php.html#16">App\Controller\ProfileSettingsController</a></td><td class="text-right">30.11</td><td class="text-right">83.8%</td></tr>
+  <tr><td><a href="FriendsController.php.html#19">App\Controller\FriendsController</a></td><td class="text-right">20.63</td><td class="text-right">88.4%</td></tr>
+  <tr><td><a href="ClubController.php.html#15">App\Controller\ClubController</a></td><td class="text-right">18.72</td><td class="text-right">78.0%</td></tr>
+  <tr><td><a href="NotificationsController.php.html#15">App\Controller\NotificationsController</a></td><td class="text-right">16.12</td><td class="text-right">92.2%</td></tr>
+  <tr><td><a href="TeamsController.php.html#28">App\Controller\TeamsController</a></td><td class="text-right">16</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ProfileController.php.html#15">App\Controller\ProfileController</a></td><td class="text-right">10</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="LoginController.php.html#26">App\Controller\LoginController</a></td><td class="text-right">8.27</td><td class="text-right">83.9%</td></tr>
+  <tr><td><a href="ContactInfoController.php.html#9">App\Controller\ContactInfoController</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+ </tbody>
+</table>
+     </div>
+    </div>
+   </div>
+   <div class="row dashboard-row">
+    <div class="col-md-6">
+     <h3>Methods</h3>
+     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
+     <div class="file-coverage-chart">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+ <style>
+  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
+  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
+  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
+  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
+  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
+  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
+  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
+  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
+ </style>
+ <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
+ <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
+ <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
+ <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
+ <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
+ <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
+ <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
+ <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
+ <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
+ <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
+ <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
+ <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
+ <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
+ <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
+ <line x1="60" y1="284.0" x2="780" y2="284.0" class="chart-grid"/>
+ <text x="52" y="284.0" text-anchor="end" dominant-baseline="middle" class="chart-label">10</text>
+ <line x1="60" y1="218.0" x2="780" y2="218.0" class="chart-grid"/>
+ <text x="52" y="218.0" text-anchor="end" dominant-baseline="middle" class="chart-label">20</text>
+ <line x1="60" y1="152.0" x2="780" y2="152.0" class="chart-grid"/>
+ <text x="52" y="152.0" text-anchor="end" dominant-baseline="middle" class="chart-label">30</text>
+ <line x1="60" y1="86.0" x2="780" y2="86.0" class="chart-grid"/>
+ <text x="52" y="86.0" text-anchor="end" dominant-baseline="middle" class="chart-label">40</text>
+ <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
+ <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">50</text>
+ <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
+ <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
+ <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
+ <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
+ <a href="FieldsController.php.html#22"><circle cx="522.0" cy="72.8" r="20.0" class="bubble-warning"><title>App\Controller\FieldsController::index — Coverage: 64.2% | Lines: 173 | Complexity: 42</title></circle></a>
+ <a href="HomeController.php.html#38"><circle cx="548.3" cy="204.8" r="16.3" class="bubble-warning"><title>App\Controller\HomeController::feed — Coverage: 67.8% | Lines: 115 | Complexity: 22</title></circle></a>
+ <a href="TournamentController.php.html#348"><circle cx="742.1" cy="218.0" r="14.8" class="bubble-success"><title>App\Controller\TournamentController::results — Coverage: 94.7% | Lines: 95 | Complexity: 20</title></circle></a>
+ <a href="HomeController.php.html#591"><circle cx="341.7" cy="237.8" r="14.6" class="bubble-danger"><title>App\Controller\HomeController::addMatchRequest — Coverage: 39.1% | Lines: 92 | Complexity: 17</title></circle></a>
+ <a href="TournamentController.php.html#24"><circle cx="704.2" cy="237.8" r="13.3" class="bubble-warning"><title>App\Controller\TournamentController::index — Coverage: 89.5% | Lines: 76 | Complexity: 17</title></circle></a>
+ <a href="FieldsController.php.html#311"><circle cx="452.7" cy="270.8" r="12.4" class="bubble-warning"><title>App\Controller\FieldsController::finalBooking — Coverage: 54.5% | Lines: 66 | Complexity: 12</title></circle></a>
+ <a href="MatchRequestController.php.html#19"><circle cx="60.0" cy="270.8" r="12.1" class="bubble-danger"><title>App\Controller\MatchRequestController::add — Coverage: 0.0% | Lines: 63 | Complexity: 12</title></circle></a>
+ <a href="HomeController.php.html#500"><circle cx="213.4" cy="257.6" r="11.9" class="bubble-danger"><title>App\Controller\HomeController::addMatch — Coverage: 21.3% | Lines: 61 | Complexity: 14</title></circle></a>
+ <a href="TournamentController.php.html#220"><circle cx="753.8" cy="257.6" r="11.3" class="bubble-success"><title>App\Controller\TournamentController::enroll — Coverage: 96.4% | Lines: 55 | Complexity: 14</title></circle></a>
+ <a href="AdminFieldController.php.html#27"><circle cx="442.0" cy="284.0" r="10.6" class="bubble-warning"><title>App\Controller\AdminFieldController::openingHours — Coverage: 53.1% | Lines: 49 | Complexity: 10</title></circle></a>
+ <a href="HomeController.php.html#208"><circle cx="642.1" cy="290.6" r="10.4" class="bubble-warning"><title>App\Controller\HomeController::addTeamMateRequest — Coverage: 80.9% | Lines: 47 | Complexity: 9</title></circle></a>
+ <a href="TeamsController.php.html#73"><circle cx="780.0" cy="277.4" r="10.2" class="bubble-success"><title>App\Controller\TeamsController::leaveTeam — Coverage: 100.0% | Lines: 45 | Complexity: 11</title></circle></a>
+ <a href="TournamentController.php.html#142"><circle cx="668.0" cy="310.4" r="10.2" class="bubble-warning"><title>App\Controller\TournamentController::addTournaments — Coverage: 84.4% | Lines: 45 | Complexity: 6</title></circle></a>
+ <a href="HomeController.php.html#874"><circle cx="60.0" cy="310.4" r="10.1" class="bubble-danger"><title>App\Controller\HomeController::buildCommentData — Coverage: 0.0% | Lines: 44 | Complexity: 6</title></circle></a>
+ <a href="ClubController.php.html#18"><circle cx="612.6" cy="317.0" r="10.0" class="bubble-warning"><title>App\Controller\ClubController::club — Coverage: 76.7% | Lines: 43 | Complexity: 5</title></circle></a>
+ <a href="LoginController.php.html#61"><circle cx="780.0" cy="330.2" r="9.7" class="bubble-success"><title>App\Controller\LoginController::register — Coverage: 100.0% | Lines: 41 | Complexity: 3</title></circle></a>
+ <a href="AdminFieldController.php.html#385"><circle cx="704.2" cy="290.6" r="9.4" class="bubble-warning"><title>App\Controller\AdminFieldController::deleteField — Coverage: 89.5% | Lines: 38 | Complexity: 9</title></circle></a>
+ <a href="AdminFieldController.php.html#323"><circle cx="640.0" cy="303.8" r="9.1" class="bubble-warning"><title>App\Controller\AdminFieldController::addField — Coverage: 80.6% | Lines: 36 | Complexity: 7</title></circle></a>
+ <a href="HomeController.php.html#438"><circle cx="60.0" cy="303.8" r="8.9" class="bubble-danger"><title>App\Controller\HomeController::replyComment — Coverage: 0.0% | Lines: 34 | Complexity: 7</title></circle></a>
+ <a href="ProfileSettingsController.php.html#28"><circle cx="631.8" cy="264.2" r="8.9" class="bubble-warning"><title>App\Controller\ProfileSettingsController::updateProfile — Coverage: 79.4% | Lines: 34 | Complexity: 13</title></circle></a>
+ <a href="AdminFieldController.php.html#267"><circle cx="605.5" cy="317.0" r="8.7" class="bubble-warning"><title>App\Controller\AdminFieldController::myFields — Coverage: 75.8% | Lines: 33 | Complexity: 5</title></circle></a>
+ <a href="HomeController.php.html#284"><circle cx="733.5" cy="310.4" r="8.5" class="bubble-success"><title>App\Controller\HomeController::likeMatch — Coverage: 93.5% | Lines: 31 | Complexity: 6</title></circle></a>
+ <a href="AdminFieldController.php.html#111"><circle cx="708.0" cy="310.4" r="8.3" class="bubble-success"><title>App\Controller\AdminFieldController::addOpeningHours — Coverage: 90.0% | Lines: 30 | Complexity: 6</title></circle></a>
+ <a href="HomeController.php.html#386"><circle cx="588.0" cy="310.4" r="8.3" class="bubble-warning"><title>App\Controller\HomeController::likeComment — Coverage: 73.3% | Lines: 30 | Complexity: 6</title></circle></a>
+ <a href="AdminFieldController.php.html#214"><circle cx="655.9" cy="310.4" r="8.2" class="bubble-warning"><title>App\Controller\AdminFieldController::closures — Coverage: 82.8% | Lines: 29 | Complexity: 6</title></circle></a>
+ <a href="TeamsController.php.html#31"><circle cx="780.0" cy="317.0" r="8.0" class="bubble-success"><title>App\Controller\TeamsController::team — Coverage: 100.0% | Lines: 28 | Complexity: 5</title></circle></a>
+ <a href="HomeController.php.html#336"><circle cx="726.7" cy="310.4" r="7.9" class="bubble-success"><title>App\Controller\HomeController::addComment — Coverage: 92.6% | Lines: 27 | Complexity: 6</title></circle></a>
+ <a href="TournamentController.php.html#490"><circle cx="696.9" cy="303.8" r="7.8" class="bubble-warning"><title>App\Controller\TournamentController::deleteTournament — Coverage: 88.5% | Lines: 26 | Complexity: 7</title></circle></a>
+ <a href="FriendsController.php.html#50"><circle cx="693.6" cy="310.4" r="7.6" class="bubble-warning"><title>App\Controller\FriendsController::sendFriendRequest — Coverage: 88.0% | Lines: 25 | Complexity: 6</title></circle></a>
+ <a href="NotificationsController.php.html#18"><circle cx="722.4" cy="330.2" r="7.6" class="bubble-success"><title>App\Controller\NotificationsController::index — Coverage: 92.0% | Lines: 25 | Complexity: 3</title></circle></a>
+ <a href="AdminFieldController.php.html#165"><circle cx="460.0" cy="303.8" r="6.5" class="bubble-warning"><title>App\Controller\AdminFieldController::deleteOpeningHours — Coverage: 55.6% | Lines: 18 | Complexity: 7</title></circle></a>
+ <a href="FieldsController.php.html#281"><circle cx="660.0" cy="323.6" r="6.5" class="bubble-warning"><title>App\Controller\FieldsController::confirm — Coverage: 83.3% | Lines: 18 | Complexity: 4</title></circle></a>
+ <a href="FriendsController.php.html#122"><circle cx="660.0" cy="323.6" r="6.5" class="bubble-warning"><title>App\Controller\FriendsController::acceptFriendRequest — Coverage: 83.3% | Lines: 18 | Complexity: 4</title></circle></a>
+ <a href="ProfileController.php.html#44"><circle cx="780.0" cy="303.8" r="6.5" class="bubble-success"><title>App\Controller\ProfileController::getStats — Coverage: 100.0% | Lines: 18 | Complexity: 7</title></circle></a>
+ <a href="TournamentController.php.html#314"><circle cx="780.0" cy="330.2" r="6.5" class="bubble-success"><title>App\Controller\TournamentController::cancelEnrollment — Coverage: 100.0% | Lines: 18 | Complexity: 3</title></circle></a>
+ <a href="HomeController.php.html#766"><circle cx="737.6" cy="323.6" r="6.3" class="bubble-success"><title>App\Controller\HomeController::getFriendIds — Coverage: 94.1% | Lines: 17 | Complexity: 4</title></circle></a>
+ <a href="HomeController.php.html#738"><circle cx="735.0" cy="323.6" r="6.1" class="bubble-success"><title>App\Controller\HomeController::getFriendsForUser — Coverage: 93.8% | Lines: 16 | Complexity: 4</title></circle></a>
+ <a href="HomeController.php.html#800"><circle cx="645.0" cy="290.6" r="6.1" class="bubble-warning"><title>App\Controller\HomeController::getUsersInMatch — Coverage: 81.2% | Lines: 16 | Complexity: 9</title></circle></a>
+ <a href="ProfileController.php.html#18"><circle cx="780.0" cy="336.8" r="6.1" class="bubble-success"><title>App\Controller\ProfileController::index — Coverage: 100.0% | Lines: 16 | Complexity: 2</title></circle></a>
+ <a href="ClubController.php.html#81"><circle cx="636.0" cy="330.2" r="5.9" class="bubble-warning"><title>App\Controller\ClubController::adminUsers — Coverage: 80.0% | Lines: 15 | Complexity: 3</title></circle></a>
+ <a href="ClubController.php.html#109"><circle cx="636.0" cy="330.2" r="5.9" class="bubble-warning"><title>App\Controller\ClubController::enroll — Coverage: 80.0% | Lines: 15 | Complexity: 3</title></circle></a>
+ <a href="ProfileSettingsController.php.html#100"><circle cx="732.0" cy="336.8" r="5.9" class="bubble-success"><title>App\Controller\ProfileSettingsController::deleteAccount — Coverage: 93.3% | Lines: 15 | Complexity: 2</title></circle></a>
+ <a href="FriendsController.php.html#92"><circle cx="625.7" cy="317.0" r="5.7" class="bubble-warning"><title>App\Controller\FriendsController::cancelFriendRequest — Coverage: 78.6% | Lines: 14 | Complexity: 5</title></circle></a>
+ <a href="NotificationsController.php.html#56"><circle cx="724.6" cy="317.0" r="5.5" class="bubble-success"><title>App\Controller\NotificationsController::markAsRead — Coverage: 92.3% | Lines: 13 | Complexity: 5</title></circle></a>
+ <a href="NotificationsController.php.html#85"><circle cx="724.6" cy="330.2" r="5.5" class="bubble-success"><title>App\Controller\NotificationsController::markAllAsRead — Coverage: 92.3% | Lines: 13 | Complexity: 3</title></circle></a>
+ <a href="NotificationsController.php.html#110"><circle cx="724.6" cy="317.0" r="5.5" class="bubble-success"><title>App\Controller\NotificationsController::delete — Coverage: 92.3% | Lines: 13 | Complexity: 5</title></circle></a>
+ <a href="ProfileSettingsController.php.html#127"><circle cx="613.8" cy="317.0" r="5.5" class="bubble-warning"><title>App\Controller\ProfileSettingsController::changePassword — Coverage: 76.9% | Lines: 13 | Complexity: 5</title></circle></a>
+ <a href="ClubController.php.html#139"><circle cx="600.0" cy="330.2" r="5.3" class="bubble-warning"><title>App\Controller\ClubController::leaveClub — Coverage: 75.0% | Lines: 12 | Complexity: 3</title></circle></a>
+ <a href="HomeController.php.html#834"><circle cx="60.0" cy="336.8" r="5.3" class="bubble-danger"><title>App\Controller\HomeController::getCommentLikeData — Coverage: 0.0% | Lines: 12 | Complexity: 2</title></circle></a>
+ <a href="FriendsController.php.html#170"><circle cx="700.0" cy="336.8" r="4.6" class="bubble-warning"><title>App\Controller\FriendsController::deleteFriend — Coverage: 88.9% | Lines: 9 | Complexity: 2</title></circle></a>
+ <a href="LoginController.php.html#30"><circle cx="60.0" cy="323.6" r="4.6" class="bubble-danger"><title>App\Controller\LoginController::checkUser — Coverage: 0.0% | Lines: 9 | Complexity: 4</title></circle></a>
+ <a href="FriendsController.php.html#37"><circle cx="780.0" cy="343.4" r="4.3" class="bubble-success"><title>App\Controller\FriendsController::searchFriends — Coverage: 100.0% | Lines: 8 | Complexity: 1</title></circle></a>
+ <a href="HomeController.php.html#941"><circle cx="510.0" cy="323.6" r="4.3" class="bubble-warning"><title>App\Controller\HomeController::getUserDisplayName — Coverage: 62.5% | Lines: 8 | Complexity: 4</title></circle></a>
+ <a href="FriendsController.php.html#25"><circle cx="780.0" cy="343.4" r="4.0" class="bubble-success"><title>App\Controller\FriendsController::indexFriendrequests — Coverage: 100.0% | Lines: 7 | Complexity: 1</title></circle></a>
+ <a href="HomeController.php.html#859"><circle cx="780.0" cy="343.4" r="4.0" class="bubble-success"><title>App\Controller\HomeController::createNotification — Coverage: 100.0% | Lines: 7 | Complexity: 1</title></circle></a>
+ <a href="ProfileSettingsController.php.html#158"><circle cx="780.0" cy="323.6" r="4.0" class="bubble-success"><title>App\Controller\ProfileSettingsController::checkOldPassword — Coverage: 100.0% | Lines: 7 | Complexity: 4</title></circle></a>
+ <a href="ClubController.php.html#165"><circle cx="660.0" cy="336.8" r="4.0" class="bubble-warning"><title>App\Controller\ClubController::removeUserFromClub — Coverage: 83.3% | Lines: 6 | Complexity: 2</title></circle></a>
+ <a href="LoginController.php.html#47"><circle cx="780.0" cy="343.4" r="4.0" class="bubble-success"><title>App\Controller\LoginController::login — Coverage: 100.0% | Lines: 6 | Complexity: 1</title></circle></a>
+ <a href="MatchRequestController.php.html#116"><circle cx="60.0" cy="336.8" r="4.0" class="bubble-danger"><title>App\Controller\MatchRequestController::getDisplayName — Coverage: 0.0% | Lines: 6 | Complexity: 2</title></circle></a>
+ <a href="FriendsController.php.html#159"><circle cx="780.0" cy="343.4" r="4.0" class="bubble-success"><title>App\Controller\FriendsController::indexFriends — Coverage: 100.0% | Lines: 5 | Complexity: 1</title></circle></a>
+ <a href="FieldsController.php.html#421"><circle cx="780.0" cy="343.4" r="4.0" class="bubble-success"><title>App\Controller\FieldsController::deleteBooking — Coverage: 100.0% | Lines: 4 | Complexity: 1</title></circle></a>
+ <a href="HomeController.php.html#727"><circle cx="600.0" cy="336.8" r="4.0" class="bubble-warning"><title>App\Controller\HomeController::getCurrentUser — Coverage: 75.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="ProfileSettingsController.php.html#19"><circle cx="780.0" cy="336.8" r="4.0" class="bubble-success"><title>App\Controller\ProfileSettingsController::index — Coverage: 100.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="AdminFieldController.php.html#204"><circle cx="540.0" cy="336.8" r="4.0" class="bubble-warning"><title>App\Controller\AdminFieldController::new — Coverage: 66.7% | Lines: 3 | Complexity: 2</title></circle></a>
+ <a href="FieldsController.php.html#413"><circle cx="780.0" cy="343.4" r="4.0" class="bubble-success"><title>App\Controller\FieldsController::status — Coverage: 100.0% | Lines: 3 | Complexity: 1</title></circle></a>
+ <a href="ContactInfoController.php.html#12"><circle cx="780.0" cy="343.4" r="4.0" class="bubble-success"><title>App\Controller\ContactInfoController::root — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="HomeController.php.html#27"><circle cx="780.0" cy="343.4" r="4.0" class="bubble-success"><title>App\Controller\HomeController::root — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="HomeController.php.html#32"><circle cx="60.0" cy="343.4" r="4.0" class="bubble-danger"><title>App\Controller\HomeController::home — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ProfileController.php.html#39"><circle cx="780.0" cy="343.4" r="4.0" class="bubble-success"><title>App\Controller\ProfileController::goToProfileSettings — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ProfileSettingsController.php.html#174"><circle cx="60.0" cy="343.4" r="4.0" class="bubble-danger"><title>App\Controller\ProfileSettingsController::logout — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+</svg>
+     </div>
+    </div>
+    <div class="col-md-6 dashboard-column">
+     <h3>&nbsp;</h3>
+     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
+     <div class="scrollbox">
+<table class="table">
+ <thead>
+  <tr>
+   <th>Method</th>
+   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+   <th class="text-right">Coverage</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr><td><a href="MatchRequestController.php.html#19">App\Controller\MatchRequestController::add</a></td><td class="text-right">156</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="FieldsController.php.html#22">App\Controller\FieldsController::index</a></td><td class="text-right">123.20</td><td class="text-right">64.2%</td></tr>
+  <tr><td><a href="HomeController.php.html#500">App\Controller\HomeController::addMatch</a></td><td class="text-right">109.50</td><td class="text-right">21.3%</td></tr>
+  <tr><td><a href="HomeController.php.html#591">App\Controller\HomeController::addMatchRequest</a></td><td class="text-right">82.18</td><td class="text-right">39.1%</td></tr>
+  <tr><td><a href="HomeController.php.html#438">App\Controller\HomeController::replyComment</a></td><td class="text-right">56</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="HomeController.php.html#874">App\Controller\HomeController::buildCommentData</a></td><td class="text-right">42</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="HomeController.php.html#38">App\Controller\HomeController::feed</a></td><td class="text-right">38.12</td><td class="text-right">67.8%</td></tr>
+  <tr><td><a href="FieldsController.php.html#311">App\Controller\FieldsController::finalBooking</a></td><td class="text-right">25.52</td><td class="text-right">54.5%</td></tr>
+  <tr><td><a href="AdminFieldController.php.html#27">App\Controller\AdminFieldController::openingHours</a></td><td class="text-right">20.34</td><td class="text-right">53.1%</td></tr>
+  <tr><td><a href="TournamentController.php.html#348">App\Controller\TournamentController::results</a></td><td class="text-right">20.06</td><td class="text-right">94.7%</td></tr>
+  <tr><td><a href="LoginController.php.html#30">App\Controller\LoginController::checkUser</a></td><td class="text-right">20</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="TournamentController.php.html#24">App\Controller\TournamentController::index</a></td><td class="text-right">17.34</td><td class="text-right">89.5%</td></tr>
+  <tr><td><a href="ProfileSettingsController.php.html#28">App\Controller\ProfileSettingsController::updateProfile</a></td><td class="text-right">14.47</td><td class="text-right">79.4%</td></tr>
+  <tr><td><a href="TournamentController.php.html#220">App\Controller\TournamentController::enroll</a></td><td class="text-right">14</td><td class="text-right">96.4%</td></tr>
+  <tr><td><a href="AdminFieldController.php.html#165">App\Controller\AdminFieldController::deleteOpeningHours</a></td><td class="text-right">11.30</td><td class="text-right">55.6%</td></tr>
+  <tr><td><a href="TeamsController.php.html#73">App\Controller\TeamsController::leaveTeam</a></td><td class="text-right">11</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="HomeController.php.html#208">App\Controller\HomeController::addTeamMateRequest</a></td><td class="text-right">9.57</td><td class="text-right">80.9%</td></tr>
+  <tr><td><a href="HomeController.php.html#800">App\Controller\HomeController::getUsersInMatch</a></td><td class="text-right">9.53</td><td class="text-right">81.2%</td></tr>
+  <tr><td><a href="AdminFieldController.php.html#385">App\Controller\AdminFieldController::deleteField</a></td><td class="text-right">9.09</td><td class="text-right">89.5%</td></tr>
+  <tr><td><a href="AdminFieldController.php.html#323">App\Controller\AdminFieldController::addField</a></td><td class="text-right">7.36</td><td class="text-right">80.6%</td></tr>
+  <tr><td><a href="TournamentController.php.html#490">App\Controller\TournamentController::deleteTournament</a></td><td class="text-right">7.08</td><td class="text-right">88.5%</td></tr>
+  <tr><td><a href="ProfileController.php.html#44">App\Controller\ProfileController::getStats</a></td><td class="text-right">7</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="HomeController.php.html#386">App\Controller\HomeController::likeComment</a></td><td class="text-right">6.68</td><td class="text-right">73.3%</td></tr>
+  <tr><td><a href="AdminFieldController.php.html#214">App\Controller\AdminFieldController::closures</a></td><td class="text-right">6.18</td><td class="text-right">82.8%</td></tr>
+  <tr><td><a href="TournamentController.php.html#142">App\Controller\TournamentController::addTournaments</a></td><td class="text-right">6.14</td><td class="text-right">84.4%</td></tr>
+  <tr><td><a href="FriendsController.php.html#50">App\Controller\FriendsController::sendFriendRequest</a></td><td class="text-right">6.06</td><td class="text-right">88.0%</td></tr>
+  <tr><td><a href="AdminFieldController.php.html#111">App\Controller\AdminFieldController::addOpeningHours</a></td><td class="text-right">6.04</td><td class="text-right">90.0%</td></tr>
+  <tr><td><a href="HomeController.php.html#284">App\Controller\HomeController::likeMatch</a></td><td class="text-right">6.01</td><td class="text-right">93.5%</td></tr>
+  <tr><td><a href="HomeController.php.html#336">App\Controller\HomeController::addComment</a></td><td class="text-right">6.01</td><td class="text-right">92.6%</td></tr>
+  <tr><td><a href="HomeController.php.html#834">App\Controller\HomeController::getCommentLikeData</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="MatchRequestController.php.html#116">App\Controller\MatchRequestController::getDisplayName</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="AdminFieldController.php.html#267">App\Controller\AdminFieldController::myFields</a></td><td class="text-right">5.36</td><td class="text-right">75.8%</td></tr>
+  <tr><td><a href="ClubController.php.html#18">App\Controller\ClubController::club</a></td><td class="text-right">5.31</td><td class="text-right">76.7%</td></tr>
+  <tr><td><a href="ProfileSettingsController.php.html#127">App\Controller\ProfileSettingsController::changePassword</a></td><td class="text-right">5.31</td><td class="text-right">76.9%</td></tr>
+  <tr><td><a href="FriendsController.php.html#92">App\Controller\FriendsController::cancelFriendRequest</a></td><td class="text-right">5.25</td><td class="text-right">78.6%</td></tr>
+  <tr><td><a href="NotificationsController.php.html#56">App\Controller\NotificationsController::markAsRead</a></td><td class="text-right">5.01</td><td class="text-right">92.3%</td></tr>
+  <tr><td><a href="NotificationsController.php.html#110">App\Controller\NotificationsController::delete</a></td><td class="text-right">5.01</td><td class="text-right">92.3%</td></tr>
+  <tr><td><a href="TeamsController.php.html#31">App\Controller\TeamsController::team</a></td><td class="text-right">5</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="HomeController.php.html#941">App\Controller\HomeController::getUserDisplayName</a></td><td class="text-right">4.84</td><td class="text-right">62.5%</td></tr>
+  <tr><td><a href="FieldsController.php.html#281">App\Controller\FieldsController::confirm</a></td><td class="text-right">4.07</td><td class="text-right">83.3%</td></tr>
+  <tr><td><a href="FriendsController.php.html#122">App\Controller\FriendsController::acceptFriendRequest</a></td><td class="text-right">4.07</td><td class="text-right">83.3%</td></tr>
+  <tr><td><a href="HomeController.php.html#738">App\Controller\HomeController::getFriendsForUser</a></td><td class="text-right">4.00</td><td class="text-right">93.8%</td></tr>
+  <tr><td><a href="HomeController.php.html#766">App\Controller\HomeController::getFriendIds</a></td><td class="text-right">4.00</td><td class="text-right">94.1%</td></tr>
+  <tr><td><a href="ProfileSettingsController.php.html#158">App\Controller\ProfileSettingsController::checkOldPassword</a></td><td class="text-right">4</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubController.php.html#139">App\Controller\ClubController::leaveClub</a></td><td class="text-right">3.14</td><td class="text-right">75.0%</td></tr>
+  <tr><td><a href="ClubController.php.html#81">App\Controller\ClubController::adminUsers</a></td><td class="text-right">3.07</td><td class="text-right">80.0%</td></tr>
+  <tr><td><a href="ClubController.php.html#109">App\Controller\ClubController::enroll</a></td><td class="text-right">3.07</td><td class="text-right">80.0%</td></tr>
+  <tr><td><a href="LoginController.php.html#61">App\Controller\LoginController::register</a></td><td class="text-right">3</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="NotificationsController.php.html#18">App\Controller\NotificationsController::index</a></td><td class="text-right">3.00</td><td class="text-right">92.0%</td></tr>
+  <tr><td><a href="NotificationsController.php.html#85">App\Controller\NotificationsController::markAllAsRead</a></td><td class="text-right">3.00</td><td class="text-right">92.3%</td></tr>
+  <tr><td><a href="TournamentController.php.html#314">App\Controller\TournamentController::cancelEnrollment</a></td><td class="text-right">3</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="AdminFieldController.php.html#204">App\Controller\AdminFieldController::new</a></td><td class="text-right">2.15</td><td class="text-right">66.7%</td></tr>
+  <tr><td><a href="HomeController.php.html#727">App\Controller\HomeController::getCurrentUser</a></td><td class="text-right">2.06</td><td class="text-right">75.0%</td></tr>
+  <tr><td><a href="ClubController.php.html#165">App\Controller\ClubController::removeUserFromClub</a></td><td class="text-right">2.02</td><td class="text-right">83.3%</td></tr>
+  <tr><td><a href="FriendsController.php.html#170">App\Controller\FriendsController::deleteFriend</a></td><td class="text-right">2.01</td><td class="text-right">88.9%</td></tr>
+  <tr><td><a href="HomeController.php.html#32">App\Controller\HomeController::home</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="ProfileController.php.html#18">App\Controller\ProfileController::index</a></td><td class="text-right">2</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ProfileSettingsController.php.html#19">App\Controller\ProfileSettingsController::index</a></td><td class="text-right">2</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ProfileSettingsController.php.html#100">App\Controller\ProfileSettingsController::deleteAccount</a></td><td class="text-right">2.00</td><td class="text-right">93.3%</td></tr>
+  <tr><td><a href="ProfileSettingsController.php.html#174">App\Controller\ProfileSettingsController::logout</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="ContactInfoController.php.html#12">App\Controller\ContactInfoController::root</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FieldsController.php.html#413">App\Controller\FieldsController::status</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FieldsController.php.html#421">App\Controller\FieldsController::deleteBooking</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendsController.php.html#25">App\Controller\FriendsController::indexFriendrequests</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendsController.php.html#37">App\Controller\FriendsController::searchFriends</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendsController.php.html#159">App\Controller\FriendsController::indexFriends</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="HomeController.php.html#27">App\Controller\HomeController::root</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="HomeController.php.html#859">App\Controller\HomeController::createNotification</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="LoginController.php.html#47">App\Controller\LoginController::login</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ProfileController.php.html#39">App\Controller\ProfileController::goToProfileSettings</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+ </tbody>
+</table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 14.1.8</a> using <a href="https://www.php.net/" target="_top">PHP 8.5.3</a> and <a href="https://phpunit.de/">PHPUnit 13.1.9</a> at Mon May 18 19:11:51 UTC 2026.</small>
+    </p>
+   </footer>
+  </div>
+ </body>
+</html>

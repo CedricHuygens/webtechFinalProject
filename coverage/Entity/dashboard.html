@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /Users/mielbreugelmans/IdeaProjects/2526-team-102/src/Entity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../_css/bootstrap.min.css?v=14.1.8" rel="stylesheet" type="text/css">
+  <link href="../_css/style.css?v=14.1.8" rel="stylesheet" type="text/css">
+  <link href="../_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="../index.html">/Users/mielbreugelmans/IdeaProjects/2526-team-102/src</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Entity</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row dashboard-row">
+    <div class="col-md-6">
+     <h3>Classes</h3>
+     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
+     <div class="file-coverage-chart">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+ <style>
+  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
+  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
+  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
+  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
+  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
+  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
+  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
+  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
+ </style>
+ <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
+ <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
+ <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
+ <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
+ <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
+ <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
+ <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
+ <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
+ <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
+ <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
+ <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
+ <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
+ <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
+ <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
+ <line x1="60" y1="284.0" x2="780" y2="284.0" class="chart-grid"/>
+ <text x="52" y="284.0" text-anchor="end" dominant-baseline="middle" class="chart-label">20</text>
+ <line x1="60" y1="218.0" x2="780" y2="218.0" class="chart-grid"/>
+ <text x="52" y="218.0" text-anchor="end" dominant-baseline="middle" class="chart-label">40</text>
+ <line x1="60" y1="152.0" x2="780" y2="152.0" class="chart-grid"/>
+ <text x="52" y="152.0" text-anchor="end" dominant-baseline="middle" class="chart-label">60</text>
+ <line x1="60" y1="86.0" x2="780" y2="86.0" class="chart-grid"/>
+ <text x="52" y="86.0" text-anchor="end" dominant-baseline="middle" class="chart-label">80</text>
+ <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
+ <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">100</text>
+ <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
+ <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
+ <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
+ <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
+ <a href="User.php.html#14"><circle cx="330.0" cy="105.8" r="20.0" class="bubble-danger"><title>App\Entity\User — Coverage: 37.5% | Lines: 120 | Complexity: 74</title></circle></a>
+ <a href="PadelMatch.php.html#11"><circle cx="338.7" cy="211.4" r="14.4" class="bubble-danger"><title>App\Entity\PadelMatch — Coverage: 38.7% | Lines: 62 | Complexity: 42</title></circle></a>
+ <a href="Club.php.html#12"><circle cx="691.8" cy="247.7" r="12.8" class="bubble-warning"><title>App\Entity\Club — Coverage: 87.8% | Lines: 49 | Complexity: 31</title></circle></a>
+ <a href="Tournament.php.html#12"><circle cx="780.0" cy="264.2" r="11.5" class="bubble-success"><title>App\Entity\Tournament — Coverage: 100.0% | Lines: 40 | Complexity: 26</title></circle></a>
+ <a href="PadelMatchComment.php.html#12"><circle cx="387.3" cy="277.4" r="10.5" class="bubble-danger"><title>App\Entity\PadelMatchComment — Coverage: 45.5% | Lines: 33 | Complexity: 22</title></circle></a>
+ <a href="TournamentMatch.php.html#9"><circle cx="780.0" cy="293.9" r="9.1" class="bubble-success"><title>App\Entity\TournamentMatch — Coverage: 100.0% | Lines: 25 | Complexity: 17</title></circle></a>
+ <a href="Field.php.html#12"><circle cx="720.0" cy="287.3" r="8.9" class="bubble-success"><title>App\Entity\Field — Coverage: 91.7% | Lines: 24 | Complexity: 19</title></circle></a>
+ <a href="Team.php.html#11"><circle cx="492.0" cy="303.8" r="8.2" class="bubble-warning"><title>App\Entity\Team — Coverage: 60.0% | Lines: 20 | Complexity: 14</title></circle></a>
+ <a href="Booking.php.html#10"><circle cx="780.0" cy="313.7" r="7.3" class="bubble-success"><title>App\Entity\Booking — Coverage: 100.0% | Lines: 16 | Complexity: 11</title></circle></a>
+ <a href="Notification.php.html#9"><circle cx="780.0" cy="313.7" r="7.3" class="bubble-success"><title>App\Entity\Notification — Coverage: 100.0% | Lines: 16 | Complexity: 11</title></circle></a>
+ <a href="ClubOpeningHours.php.html#10"><circle cx="780.0" cy="320.3" r="6.6" class="bubble-success"><title>App\Entity\ClubOpeningHours — Coverage: 100.0% | Lines: 13 | Complexity: 9</title></circle></a>
+ <a href="ClubClosure.php.html#10"><circle cx="780.0" cy="326.9" r="5.8" class="bubble-success"><title>App\Entity\ClubClosure — Coverage: 100.0% | Lines: 10 | Complexity: 7</title></circle></a>
+ <a href="ClubUser.php.html#9"><circle cx="780.0" cy="326.9" r="5.8" class="bubble-success"><title>App\Entity\ClubUser — Coverage: 100.0% | Lines: 10 | Complexity: 7</title></circle></a>
+ <a href="FriendRequest.php.html#9"><circle cx="780.0" cy="326.9" r="5.8" class="bubble-success"><title>App\Entity\FriendRequest — Coverage: 100.0% | Lines: 10 | Complexity: 7</title></circle></a>
+ <a href="PadelMatchPlayer.php.html#9"><circle cx="780.0" cy="326.9" r="5.8" class="bubble-success"><title>App\Entity\PadelMatchPlayer — Coverage: 100.0% | Lines: 10 | Complexity: 7</title></circle></a>
+ <a href="Friend.php.html#9"><circle cx="780.0" cy="333.5" r="4.8" class="bubble-success"><title>App\Entity\Friend — Coverage: 100.0% | Lines: 7 | Complexity: 5</title></circle></a>
+ <a href="PadelMatchCommentComment.php.html#9"><circle cx="780.0" cy="333.5" r="4.8" class="bubble-success"><title>App\Entity\PadelMatchCommentComment — Coverage: 100.0% | Lines: 7 | Complexity: 5</title></circle></a>
+ <a href="PadelMatchCommentLike.php.html#13"><circle cx="780.0" cy="333.5" r="4.8" class="bubble-success"><title>App\Entity\PadelMatchCommentLike — Coverage: 100.0% | Lines: 7 | Complexity: 5</title></circle></a>
+ <a href="PadelMatchLike.php.html#9"><circle cx="471.4" cy="333.5" r="4.8" class="bubble-warning"><title>App\Entity\PadelMatchLike — Coverage: 57.1% | Lines: 7 | Complexity: 5</title></circle></a>
+ <a href="TournamentField.php.html#9"><circle cx="780.0" cy="333.5" r="4.8" class="bubble-success"><title>App\Entity\TournamentField — Coverage: 100.0% | Lines: 7 | Complexity: 5</title></circle></a>
+ <a href="TournamentTeam.php.html#9"><circle cx="780.0" cy="333.5" r="4.8" class="bubble-success"><title>App\Entity\TournamentTeam — Coverage: 100.0% | Lines: 7 | Complexity: 5</title></circle></a>
+</svg>
+     </div>
+    </div>
+    <div class="col-md-6 dashboard-column">
+     <h3>&nbsp;</h3>
+     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
+     <div class="scrollbox">
+<table class="table">
+ <thead>
+  <tr>
+   <th>Class</th>
+   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+   <th class="text-right">Coverage</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr><td><a href="User.php.html#14">App\Entity\User</a></td><td class="text-right">1410.91</td><td class="text-right">37.5%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#11">App\Entity\PadelMatch</a></td><td class="text-right">448.14</td><td class="text-right">38.7%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#12">App\Entity\PadelMatchComment</a></td><td class="text-right">100.55</td><td class="text-right">45.5%</td></tr>
+  <tr><td><a href="Club.php.html#12">App\Entity\Club</a></td><td class="text-right">32.76</td><td class="text-right">87.8%</td></tr>
+  <tr><td><a href="Team.php.html#11">App\Entity\Team</a></td><td class="text-right">26.54</td><td class="text-right">60.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#12">App\Entity\Tournament</a></td><td class="text-right">26</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#12">App\Entity\Field</a></td><td class="text-right">19.21</td><td class="text-right">91.7%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#9">App\Entity\TournamentMatch</a></td><td class="text-right">17</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#10">App\Entity\Booking</a></td><td class="text-right">11</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#9">App\Entity\Notification</a></td><td class="text-right">11</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#10">App\Entity\ClubOpeningHours</a></td><td class="text-right">9</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubClosure.php.html#10">App\Entity\ClubClosure</a></td><td class="text-right">7</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubUser.php.html#9">App\Entity\ClubUser</a></td><td class="text-right">7</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendRequest.php.html#9">App\Entity\FriendRequest</a></td><td class="text-right">7</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchPlayer.php.html#9">App\Entity\PadelMatchPlayer</a></td><td class="text-right">7</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchLike.php.html#9">App\Entity\PadelMatchLike</a></td><td class="text-right">6.97</td><td class="text-right">57.1%</td></tr>
+  <tr><td><a href="Friend.php.html#9">App\Entity\Friend</a></td><td class="text-right">5</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentComment.php.html#9">App\Entity\PadelMatchCommentComment</a></td><td class="text-right">5</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentLike.php.html#13">App\Entity\PadelMatchCommentLike</a></td><td class="text-right">5</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentField.php.html#9">App\Entity\TournamentField</a></td><td class="text-right">5</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentTeam.php.html#9">App\Entity\TournamentTeam</a></td><td class="text-right">5</td><td class="text-right">100.0%</td></tr>
+ </tbody>
+</table>
+     </div>
+    </div>
+   </div>
+   <div class="row dashboard-row">
+    <div class="col-md-6">
+     <h3>Methods</h3>
+     <p class="text-muted small">Bubble size = executable lines. Hover for details, click to navigate.</p>
+     <div class="file-coverage-chart">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+ <style>
+  .bubble-success { fill: var(--phpunit-success-bar); opacity: 0.7; }
+  .bubble-warning { fill: var(--phpunit-warning-bar); opacity: 0.7; }
+  .bubble-danger { fill: var(--phpunit-danger-bar); opacity: 0.7; }
+  .bubble-success:hover, .bubble-warning:hover, .bubble-danger:hover { opacity: 1; stroke: var(--bs-emphasis-color); stroke-width: 1.5; }
+  .chart-grid { stroke: var(--bs-border-color); stroke-width: 0.5; stroke-dasharray: 4,4; opacity: 0.5; }
+  .chart-axis { stroke: var(--bs-border-color); stroke-width: 1; }
+  .chart-label { fill: var(--bs-body-color); font-size: 11px; font-family: var(--bs-font-sans-serif, sans-serif); }
+  .chart-title { fill: var(--bs-body-color); font-size: 12px; font-family: var(--bs-font-sans-serif, sans-serif); }
+ </style>
+ <line x1="60.0" y1="20" x2="60.0" y2="350" class="chart-grid"/>
+ <text x="60.0" y="368" text-anchor="middle" class="chart-label">0%</text>
+ <line x1="204.0" y1="20" x2="204.0" y2="350" class="chart-grid"/>
+ <text x="204.0" y="368" text-anchor="middle" class="chart-label">20%</text>
+ <line x1="348.0" y1="20" x2="348.0" y2="350" class="chart-grid"/>
+ <text x="348.0" y="368" text-anchor="middle" class="chart-label">40%</text>
+ <line x1="492.0" y1="20" x2="492.0" y2="350" class="chart-grid"/>
+ <text x="492.0" y="368" text-anchor="middle" class="chart-label">60%</text>
+ <line x1="636.0" y1="20" x2="636.0" y2="350" class="chart-grid"/>
+ <text x="636.0" y="368" text-anchor="middle" class="chart-label">80%</text>
+ <line x1="780.0" y1="20" x2="780.0" y2="350" class="chart-grid"/>
+ <text x="780.0" y="368" text-anchor="middle" class="chart-label">100%</text>
+ <line x1="60" y1="350.0" x2="780" y2="350.0" class="chart-grid"/>
+ <text x="52" y="350.0" text-anchor="end" dominant-baseline="middle" class="chart-label">0</text>
+ <line x1="60" y1="284.0" x2="780" y2="284.0" class="chart-grid"/>
+ <text x="52" y="284.0" text-anchor="end" dominant-baseline="middle" class="chart-label">1</text>
+ <line x1="60" y1="218.0" x2="780" y2="218.0" class="chart-grid"/>
+ <text x="52" y="218.0" text-anchor="end" dominant-baseline="middle" class="chart-label">2</text>
+ <line x1="60" y1="152.0" x2="780" y2="152.0" class="chart-grid"/>
+ <text x="52" y="152.0" text-anchor="end" dominant-baseline="middle" class="chart-label">3</text>
+ <line x1="60" y1="86.0" x2="780" y2="86.0" class="chart-grid"/>
+ <text x="52" y="86.0" text-anchor="end" dominant-baseline="middle" class="chart-label">4</text>
+ <line x1="60" y1="20.0" x2="780" y2="20.0" class="chart-grid"/>
+ <text x="52" y="20.0" text-anchor="end" dominant-baseline="middle" class="chart-label">5</text>
+ <line x1="60" y1="20" x2="60" y2="350" class="chart-axis"/>
+ <line x1="60" y1="350" x2="780" y2="350" class="chart-axis"/>
+ <text x="420.0" y="395" text-anchor="middle" class="chart-title">Line Coverage (%)</text>
+ <text x="15" y="185.0" text-anchor="middle" transform="rotate(-90, 15, 185.0)" class="chart-title">Cyclomatic Complexity</text>
+ <a href="User.php.html#102"><circle cx="780.0" cy="284.0" r="20.0" class="bubble-success"><title>App\Entity\User::__construct — Coverage: 100.0% | Lines: 11 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#76"><circle cx="780.0" cy="284.0" r="13.5" class="bubble-success"><title>App\Entity\Club::__construct — Coverage: 100.0% | Lines: 5 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#185"><circle cx="60.0" cy="86.0" r="13.5" class="bubble-danger"><title>App\Entity\PadelMatch::getTeam1Players — Coverage: 0.0% | Lines: 5 | Complexity: 4</title></circle></a>
+ <a href="PadelMatch.php.html#198"><circle cx="60.0" cy="86.0" r="13.5" class="bubble-danger"><title>App\Entity\PadelMatch::getTeam2Players — Coverage: 0.0% | Lines: 5 | Complexity: 4</title></circle></a>
+ <a href="Club.php.html#93"><circle cx="780.0" cy="218.0" r="12.1" class="bubble-success"><title>App\Entity\Club::addOpeningHour — Coverage: 100.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="Club.php.html#103"><circle cx="780.0" cy="152.0" r="12.1" class="bubble-success"><title>App\Entity\Club::removeOpeningHour — Coverage: 100.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="Club.php.html#123"><circle cx="780.0" cy="218.0" r="12.1" class="bubble-success"><title>App\Entity\Club::addClosure — Coverage: 100.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="Club.php.html#133"><circle cx="780.0" cy="152.0" r="12.1" class="bubble-success"><title>App\Entity\Club::removeClosure — Coverage: 100.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="Club.php.html#153"><circle cx="600.0" cy="218.0" r="12.1" class="bubble-warning"><title>App\Entity\Club::addTournament — Coverage: 75.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="Club.php.html#163"><circle cx="420.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\Club::removeTournament — Coverage: 50.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="Club.php.html#195"><circle cx="600.0" cy="218.0" r="12.1" class="bubble-warning"><title>App\Entity\Club::addClubUser — Coverage: 75.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="Club.php.html#205"><circle cx="420.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\Club::removeClubUser — Coverage: 50.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="Field.php.html#89"><circle cx="780.0" cy="218.0" r="12.1" class="bubble-success"><title>App\Entity\Field::addTournamentField — Coverage: 100.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="Field.php.html#99"><circle cx="420.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\Field::removeTournamentField — Coverage: 50.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="PadelMatch.php.html#164"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatch::addMatchPlayer — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="PadelMatch.php.html#174"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatch::removeMatchPlayer — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="PadelMatch.php.html#219"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatch::addLike — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="PadelMatch.php.html#229"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatch::removeLike — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="PadelMatch.php.html#248"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatch::addPadelMatchComment — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="PadelMatch.php.html#258"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatch::removePadelMatchComment — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="PadelMatchComment.php.html#110"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatchComment::addPadelMatchCommentLike — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="PadelMatchComment.php.html#120"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatchComment::removePadelMatchCommentLike — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="PadelMatchComment.php.html#138"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatchComment::addPadelMatchCommentComment — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="PadelMatchComment.php.html#148"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\PadelMatchComment::removePadelMatchCommentComment — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="Team.php.html#90"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\Team::addTournamentTeams — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="Team.php.html#100"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\Team::removeTournamentTeams2 — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="Tournament.php.html#103"><circle cx="780.0" cy="218.0" r="12.1" class="bubble-success"><title>App\Entity\Tournament::addTournamentField — Coverage: 100.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="Tournament.php.html#113"><circle cx="780.0" cy="152.0" r="12.1" class="bubble-success"><title>App\Entity\Tournament::removeTournamentField — Coverage: 100.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="Tournament.php.html#132"><circle cx="780.0" cy="218.0" r="12.1" class="bubble-success"><title>App\Entity\Tournament::addTournamentTeam — Coverage: 100.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="Tournament.php.html#142"><circle cx="780.0" cy="152.0" r="12.1" class="bubble-success"><title>App\Entity\Tournament::removeTournamentTeam — Coverage: 100.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="Tournament.php.html#162"><circle cx="780.0" cy="218.0" r="12.1" class="bubble-success"><title>App\Entity\Tournament::addTeam1 — Coverage: 100.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="Tournament.php.html#172"><circle cx="780.0" cy="152.0" r="12.1" class="bubble-success"><title>App\Entity\Tournament::removeTeam1 — Coverage: 100.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="User.php.html#215"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\User::addMatchPlayer — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="User.php.html#239"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\User::addPadelMatchLike — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="User.php.html#249"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\User::removePadelMatchLike — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="User.php.html#269"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\User::addPadelMatchComment — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="User.php.html#279"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\User::removePadelMatchComment — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="User.php.html#308"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\User::addTeam — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="User.php.html#318"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\User::removeTeam — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="User.php.html#338"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\User::addFriend — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="User.php.html#348"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\User::removeFriend — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="User.php.html#368"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\User::addFriendRequest — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="User.php.html#378"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\User::removeFriendRequest — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="User.php.html#398"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\User::addNotification — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="User.php.html#408"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\User::removeNotification — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="User.php.html#428"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\User::addClub — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="User.php.html#438"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\User::removeClub — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="User.php.html#460"><circle cx="60.0" cy="218.0" r="12.1" class="bubble-danger"><title>App\Entity\User::addClubUser — Coverage: 0.0% | Lines: 4 | Complexity: 2</title></circle></a>
+ <a href="User.php.html#470"><circle cx="60.0" cy="152.0" r="12.1" class="bubble-danger"><title>App\Entity\User::removeClubUser — Coverage: 0.0% | Lines: 4 | Complexity: 3</title></circle></a>
+ <a href="PadelMatch.php.html#60"><circle cx="780.0" cy="284.0" r="10.4" class="bubble-success"><title>App\Entity\PadelMatch::__construct — Coverage: 100.0% | Lines: 3 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#47"><circle cx="780.0" cy="284.0" r="10.4" class="bubble-success"><title>App\Entity\Tournament::__construct — Coverage: 100.0% | Lines: 3 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#44"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Booking::setField — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#56"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Booking::setDate — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#68"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Booking::setStartTime — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#80"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Booking::setEndTime — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#92"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Booking::setUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#64"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Club::setName — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#180"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Club::setUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubClosure.php.html#37"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubClosure::setClub — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubClosure.php.html#49"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubClosure::setDate — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubClosure.php.html#61"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubClosure::setReason — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubOpeningHours.php.html#40"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubOpeningHours::setClub — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubOpeningHours.php.html#52"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubOpeningHours::setDayOfWeek — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubOpeningHours.php.html#64"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubOpeningHours::setOpenTime — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubOpeningHours.php.html#76"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubOpeningHours::setCloseTime — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubUser.php.html#37"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubUser::setUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubUser.php.html#49"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubUser::setClub — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="ClubUser.php.html#61"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\ClubUser::setCreatedAt — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#52"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Field::setClub — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#58"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Field::__construct — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Friend.php.html#34"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Friend::setUser1 — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Friend.php.html#46"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Friend::setUser2 — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="FriendRequest.php.html#37"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\FriendRequest::setSenderUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="FriendRequest.php.html#49"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\FriendRequest::setReceiverUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="FriendRequest.php.html#61"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\FriendRequest::setCreatedAt — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#42"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Notification::setUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#54"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Notification::setType — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#66"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Notification::setMessage — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#78"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Notification::setIsRead — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#90"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Notification::setCreatedAt — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#77"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatch::setStartTime — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#89"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatch::setEndTime — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#101"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatch::setTeam1Score — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#113"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatch::setTeam2Score — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#125"><circle cx="60.0" cy="284.0" r="8.5" class="bubble-danger"><title>App\Entity\PadelMatch::setField — Coverage: 0.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#137"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatch::setTeam1 — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#149"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatch::setTeam2 — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#43"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchComment::__construct — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#59"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchComment::setPadelMatch — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#71"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchComment::setUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#83"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchComment::setContent — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#95"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchComment::setCreatedAt — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentComment.php.html#34"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchCommentComment::setMainComment — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentComment.php.html#46"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchCommentComment::setReplyComment — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentLike.php.html#38"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchCommentLike::setComment — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentLike.php.html#50"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchCommentLike::setUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchLike.php.html#33"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchLike::setPadelMatch — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchLike.php.html#45"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchLike::setUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchPlayer.php.html#37"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchPlayer::setTeamNumber — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchPlayer.php.html#48"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchPlayer::setUser — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchPlayer.php.html#59"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\PadelMatchPlayer::setPadelMatch — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Team.php.html#51"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Team::setUser1 — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Team.php.html#63"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Team::setUser2 — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Team.php.html#75"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Team::setName — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#64"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Tournament::setName — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#76"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Tournament::setDate — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#88"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\Tournament::setClub — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentField.php.html#34"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentField::setTournament — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentField.php.html#46"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentField::setField — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#54"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentMatch::setTournament — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#65"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentMatch::setTeam1 — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#76"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentMatch::setTeam2 — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#87"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentMatch::setWinner — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#98"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentMatch::setRound — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#109"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentMatch::setMatchNumber — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#120"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentMatch::setTeam1Score — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#131"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentMatch::setTeam2Score — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentTeam.php.html#35"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentTeam::setTournament — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="TournamentTeam.php.html#47"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\TournamentTeam::setTeam — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#127"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\User::setFirstName — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#138"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\User::setLastName — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#149"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\User::setUsername — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#160"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\User::setEmail — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#171"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\User::setPassword — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#182"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\User::setBirthDate — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#193"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\User::setProfilePicture — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#204"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\User::setRoles — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#225"><circle cx="60.0" cy="284.0" r="8.5" class="bubble-danger"><title>App\Entity\User::removeMatchPlayer — Coverage: 0.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#487"><circle cx="780.0" cy="284.0" r="8.5" class="bubble-success"><title>App\Entity\User::setIsActive — Coverage: 100.0% | Lines: 2 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#34"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Booking::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#39"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Booking::getField — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#51"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Booking::getDate — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#63"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Booking::getStartTime — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#75"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Booking::getEndTime — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Booking.php.html#87"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Booking::getUser — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#54"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Club::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#59"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Club::getName — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#71"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Club::getFields — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#88"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Club::getOpeningHours — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#118"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Club::getClosures — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#148"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Club::getTournaments — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#175"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Club::getUser — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Club.php.html#190"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Club::getClubUsers — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubClosure.php.html#27"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubClosure::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubClosure.php.html#32"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubClosure::getClub — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubClosure.php.html#44"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubClosure::getDate — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubClosure.php.html#56"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubClosure::getReason — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubOpeningHours.php.html#30"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubOpeningHours::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubOpeningHours.php.html#35"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubOpeningHours::getClub — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubOpeningHours.php.html#47"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubOpeningHours::getDayOfWeek — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubOpeningHours.php.html#59"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubOpeningHours::getOpenTime — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubOpeningHours.php.html#71"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubOpeningHours::getCloseTime — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubUser.php.html#27"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubUser::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubUser.php.html#32"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubUser::getUser — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubUser.php.html#44"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubUser::getClub — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="ClubUser.php.html#56"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\ClubUser::getCreatedAt — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#47"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::getClub — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#64"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#66"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::getName — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#67"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::setName — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#69"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::getType — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#70"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::setType — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#72"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::getFieldNumber — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#73"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::setFieldNumber — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#75"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::getLocation — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#76"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::setLocation — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#79"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::getBookings — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Field.php.html#84"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Field::getTournamentFields — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Friend.php.html#24"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Friend::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Friend.php.html#29"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Friend::getUser1 — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Friend.php.html#41"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Friend::getUser2 — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="FriendRequest.php.html#27"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\FriendRequest::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="FriendRequest.php.html#32"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\FriendRequest::getSenderUser — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="FriendRequest.php.html#44"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\FriendRequest::getReceiverUser — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="FriendRequest.php.html#56"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\FriendRequest::getCreatedAt — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#32"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Notification::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#37"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Notification::getUser — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#49"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Notification::getType — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#61"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Notification::getMessage — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#73"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Notification::isRead — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Notification.php.html#85"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Notification::getCreatedAt — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#67"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatch::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#72"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatch::getStartTime — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#84"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatch::getEndTime — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#96"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatch::getTeam1Score — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#108"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatch::getTeam2Score — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#120"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatch::getField — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#132"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatch::getTeam1 — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#144"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatch::getTeam2 — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#159"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatch::getMatchPlayers — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#214"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\PadelMatch::getLikes — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatch.php.html#243"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\PadelMatch::getPadelMatchComments — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#49"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchComment::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#54"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchComment::getPadelMatch — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#66"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchComment::getUser — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#78"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchComment::getContent — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#90"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchComment::getCreatedAt — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#105"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\PadelMatchComment::getPadelMatchCommentLikes — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchComment.php.html#133"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\PadelMatchComment::getPadelMatchCommentComments — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentComment.php.html#24"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchCommentComment::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentComment.php.html#29"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchCommentComment::getMainComment — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentComment.php.html#41"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchCommentComment::getReplyComment — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentLike.php.html#28"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchCommentLike::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentLike.php.html#33"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchCommentLike::getComment — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchCommentLike.php.html#45"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchCommentLike::getUser — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchLike.php.html#23"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\PadelMatchLike::getId — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchLike.php.html#28"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\PadelMatchLike::getPadelMatch — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchLike.php.html#40"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\PadelMatchLike::getUser — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchPlayer.php.html#27"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchPlayer::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchPlayer.php.html#32"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchPlayer::getTeamNumber — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchPlayer.php.html#43"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchPlayer::getUser — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="PadelMatchPlayer.php.html#54"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\PadelMatchPlayer::getPadelMatch — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Team.php.html#36"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Team::__construct — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Team.php.html#41"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Team::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Team.php.html#46"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Team::getUser1 — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Team.php.html#58"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Team::getUser2 — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Team.php.html#70"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Team::getName — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Team.php.html#85"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Team::getTournamentTeams — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#54"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Tournament::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#59"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Tournament::getName — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#71"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Tournament::getDate — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#83"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Tournament::getClub — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#98"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Tournament::getTournamentFields — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#127"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Tournament::getTournamentTeams — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="Tournament.php.html#157"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\Tournament::getTeam1 — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentField.php.html#24"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentField::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentField.php.html#29"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentField::getTournament — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentField.php.html#41"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentField::getField — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#44"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentMatch::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#49"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentMatch::getTournament — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#60"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentMatch::getTeam1 — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#71"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentMatch::getTeam2 — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#82"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentMatch::getWinner — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#93"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentMatch::getRound — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#104"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentMatch::getMatchNumber — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#115"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentMatch::getTeam1Score — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentMatch.php.html#126"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentMatch::getTeam2Score — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentTeam.php.html#25"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentTeam::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentTeam.php.html#30"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentTeam::getTournament — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="TournamentTeam.php.html#42"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\TournamentTeam::getTeam — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#117"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getId — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#122"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getFirstName — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#133"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getLastName — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#144"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getUsername — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#155"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getEmail — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#166"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getPassword — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#177"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getBirthDate — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#188"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getProfilePicture — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#199"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getRoles — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#210"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\User::getMatchPlayers — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#234"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\User::getPadelMatchLikes — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#264"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\User::getPadelMatchComments — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#291"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::eraseCredentials — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#295"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getUserIdentifier — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#303"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getTeams — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#333"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getFriends — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#363"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getFriendRequests — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#393"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::getNotifications — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#423"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\User::getClubs — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#455"><circle cx="60.0" cy="284.0" r="6.0" class="bubble-danger"><title>App\Entity\User::getClubUsers — Coverage: 0.0% | Lines: 1 | Complexity: 1</title></circle></a>
+ <a href="User.php.html#482"><circle cx="780.0" cy="284.0" r="6.0" class="bubble-success"><title>App\Entity\User::isActive — Coverage: 100.0% | Lines: 1 | Complexity: 1</title></circle></a>
+</svg>
+     </div>
+    </div>
+    <div class="col-md-6 dashboard-column">
+     <h3>&nbsp;</h3>
+     <p class="text-muted small">Sorted by descending CRAP (Change Risk Anti-Patterns) index.</p>
+     <div class="scrollbox">
+<table class="table">
+ <thead>
+  <tr>
+   <th>Method</th>
+   <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+   <th class="text-right">Coverage</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr><td><a href="PadelMatch.php.html#185">App\Entity\PadelMatch::getTeam1Players</a></td><td class="text-right">20</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#198">App\Entity\PadelMatch::getTeam2Players</a></td><td class="text-right">20</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#174">App\Entity\PadelMatch::removeMatchPlayer</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#229">App\Entity\PadelMatch::removeLike</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#258">App\Entity\PadelMatch::removePadelMatchComment</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#120">App\Entity\PadelMatchComment::removePadelMatchCommentLike</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#148">App\Entity\PadelMatchComment::removePadelMatchCommentComment</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Team.php.html#100">App\Entity\Team::removeTournamentTeams2</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#249">App\Entity\User::removePadelMatchLike</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#279">App\Entity\User::removePadelMatchComment</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#318">App\Entity\User::removeTeam</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#348">App\Entity\User::removeFriend</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#378">App\Entity\User::removeFriendRequest</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#408">App\Entity\User::removeNotification</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#438">App\Entity\User::removeClub</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#470">App\Entity\User::removeClubUser</a></td><td class="text-right">12</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#164">App\Entity\PadelMatch::addMatchPlayer</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#219">App\Entity\PadelMatch::addLike</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#248">App\Entity\PadelMatch::addPadelMatchComment</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#110">App\Entity\PadelMatchComment::addPadelMatchCommentLike</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#138">App\Entity\PadelMatchComment::addPadelMatchCommentComment</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Team.php.html#90">App\Entity\Team::addTournamentTeams</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#215">App\Entity\User::addMatchPlayer</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#239">App\Entity\User::addPadelMatchLike</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#269">App\Entity\User::addPadelMatchComment</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#308">App\Entity\User::addTeam</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#338">App\Entity\User::addFriend</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#368">App\Entity\User::addFriendRequest</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#398">App\Entity\User::addNotification</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#428">App\Entity\User::addClub</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#460">App\Entity\User::addClubUser</a></td><td class="text-right">6</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Club.php.html#163">App\Entity\Club::removeTournament</a></td><td class="text-right">4.12</td><td class="text-right">50.0%</td></tr>
+  <tr><td><a href="Club.php.html#205">App\Entity\Club::removeClubUser</a></td><td class="text-right">4.12</td><td class="text-right">50.0%</td></tr>
+  <tr><td><a href="Field.php.html#99">App\Entity\Field::removeTournamentField</a></td><td class="text-right">4.12</td><td class="text-right">50.0%</td></tr>
+  <tr><td><a href="Club.php.html#103">App\Entity\Club::removeOpeningHour</a></td><td class="text-right">3</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#133">App\Entity\Club::removeClosure</a></td><td class="text-right">3</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#113">App\Entity\Tournament::removeTournamentField</a></td><td class="text-right">3</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#142">App\Entity\Tournament::removeTournamentTeam</a></td><td class="text-right">3</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#172">App\Entity\Tournament::removeTeam1</a></td><td class="text-right">3</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#153">App\Entity\Club::addTournament</a></td><td class="text-right">2.06</td><td class="text-right">75.0%</td></tr>
+  <tr><td><a href="Club.php.html#195">App\Entity\Club::addClubUser</a></td><td class="text-right">2.06</td><td class="text-right">75.0%</td></tr>
+  <tr><td><a href="Club.php.html#93">App\Entity\Club::addOpeningHour</a></td><td class="text-right">2</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#123">App\Entity\Club::addClosure</a></td><td class="text-right">2</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#89">App\Entity\Field::addTournamentField</a></td><td class="text-right">2</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#125">App\Entity\PadelMatch::setField</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#214">App\Entity\PadelMatch::getLikes</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#243">App\Entity\PadelMatch::getPadelMatchComments</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#105">App\Entity\PadelMatchComment::getPadelMatchCommentLikes</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#133">App\Entity\PadelMatchComment::getPadelMatchCommentComments</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatchLike.php.html#23">App\Entity\PadelMatchLike::getId</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatchLike.php.html#28">App\Entity\PadelMatchLike::getPadelMatch</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="PadelMatchLike.php.html#40">App\Entity\PadelMatchLike::getUser</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#103">App\Entity\Tournament::addTournamentField</a></td><td class="text-right">2</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#132">App\Entity\Tournament::addTournamentTeam</a></td><td class="text-right">2</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#162">App\Entity\Tournament::addTeam1</a></td><td class="text-right">2</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#210">App\Entity\User::getMatchPlayers</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#225">App\Entity\User::removeMatchPlayer</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#234">App\Entity\User::getPadelMatchLikes</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#264">App\Entity\User::getPadelMatchComments</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#423">App\Entity\User::getClubs</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="User.php.html#455">App\Entity\User::getClubUsers</a></td><td class="text-right">2</td><td class="text-right">0.0%</td></tr>
+  <tr><td><a href="Booking.php.html#34">App\Entity\Booking::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#39">App\Entity\Booking::getField</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#44">App\Entity\Booking::setField</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#51">App\Entity\Booking::getDate</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#56">App\Entity\Booking::setDate</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#63">App\Entity\Booking::getStartTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#68">App\Entity\Booking::setStartTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#75">App\Entity\Booking::getEndTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#80">App\Entity\Booking::setEndTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#87">App\Entity\Booking::getUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Booking.php.html#92">App\Entity\Booking::setUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#54">App\Entity\Club::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#59">App\Entity\Club::getName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#64">App\Entity\Club::setName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#71">App\Entity\Club::getFields</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#76">App\Entity\Club::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#88">App\Entity\Club::getOpeningHours</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#118">App\Entity\Club::getClosures</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#148">App\Entity\Club::getTournaments</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#175">App\Entity\Club::getUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#180">App\Entity\Club::setUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Club.php.html#190">App\Entity\Club::getClubUsers</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubClosure.php.html#27">App\Entity\ClubClosure::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubClosure.php.html#32">App\Entity\ClubClosure::getClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubClosure.php.html#37">App\Entity\ClubClosure::setClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubClosure.php.html#44">App\Entity\ClubClosure::getDate</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubClosure.php.html#49">App\Entity\ClubClosure::setDate</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubClosure.php.html#56">App\Entity\ClubClosure::getReason</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubClosure.php.html#61">App\Entity\ClubClosure::setReason</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#30">App\Entity\ClubOpeningHours::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#35">App\Entity\ClubOpeningHours::getClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#40">App\Entity\ClubOpeningHours::setClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#47">App\Entity\ClubOpeningHours::getDayOfWeek</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#52">App\Entity\ClubOpeningHours::setDayOfWeek</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#59">App\Entity\ClubOpeningHours::getOpenTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#64">App\Entity\ClubOpeningHours::setOpenTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#71">App\Entity\ClubOpeningHours::getCloseTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubOpeningHours.php.html#76">App\Entity\ClubOpeningHours::setCloseTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubUser.php.html#27">App\Entity\ClubUser::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubUser.php.html#32">App\Entity\ClubUser::getUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubUser.php.html#37">App\Entity\ClubUser::setUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubUser.php.html#44">App\Entity\ClubUser::getClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubUser.php.html#49">App\Entity\ClubUser::setClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubUser.php.html#56">App\Entity\ClubUser::getCreatedAt</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="ClubUser.php.html#61">App\Entity\ClubUser::setCreatedAt</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#47">App\Entity\Field::getClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#52">App\Entity\Field::setClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#58">App\Entity\Field::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#64">App\Entity\Field::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#66">App\Entity\Field::getName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#67">App\Entity\Field::setName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#69">App\Entity\Field::getType</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#70">App\Entity\Field::setType</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#72">App\Entity\Field::getFieldNumber</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#73">App\Entity\Field::setFieldNumber</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#75">App\Entity\Field::getLocation</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#76">App\Entity\Field::setLocation</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#79">App\Entity\Field::getBookings</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Field.php.html#84">App\Entity\Field::getTournamentFields</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Friend.php.html#24">App\Entity\Friend::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Friend.php.html#29">App\Entity\Friend::getUser1</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Friend.php.html#34">App\Entity\Friend::setUser1</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Friend.php.html#41">App\Entity\Friend::getUser2</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Friend.php.html#46">App\Entity\Friend::setUser2</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendRequest.php.html#27">App\Entity\FriendRequest::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendRequest.php.html#32">App\Entity\FriendRequest::getSenderUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendRequest.php.html#37">App\Entity\FriendRequest::setSenderUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendRequest.php.html#44">App\Entity\FriendRequest::getReceiverUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendRequest.php.html#49">App\Entity\FriendRequest::setReceiverUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendRequest.php.html#56">App\Entity\FriendRequest::getCreatedAt</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="FriendRequest.php.html#61">App\Entity\FriendRequest::setCreatedAt</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#32">App\Entity\Notification::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#37">App\Entity\Notification::getUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#42">App\Entity\Notification::setUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#49">App\Entity\Notification::getType</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#54">App\Entity\Notification::setType</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#61">App\Entity\Notification::getMessage</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#66">App\Entity\Notification::setMessage</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#73">App\Entity\Notification::isRead</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#78">App\Entity\Notification::setIsRead</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#85">App\Entity\Notification::getCreatedAt</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Notification.php.html#90">App\Entity\Notification::setCreatedAt</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#60">App\Entity\PadelMatch::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#67">App\Entity\PadelMatch::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#72">App\Entity\PadelMatch::getStartTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#77">App\Entity\PadelMatch::setStartTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#84">App\Entity\PadelMatch::getEndTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#89">App\Entity\PadelMatch::setEndTime</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#96">App\Entity\PadelMatch::getTeam1Score</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#101">App\Entity\PadelMatch::setTeam1Score</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#108">App\Entity\PadelMatch::getTeam2Score</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#113">App\Entity\PadelMatch::setTeam2Score</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#120">App\Entity\PadelMatch::getField</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#132">App\Entity\PadelMatch::getTeam1</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#137">App\Entity\PadelMatch::setTeam1</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#144">App\Entity\PadelMatch::getTeam2</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#149">App\Entity\PadelMatch::setTeam2</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatch.php.html#159">App\Entity\PadelMatch::getMatchPlayers</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#43">App\Entity\PadelMatchComment::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#49">App\Entity\PadelMatchComment::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#54">App\Entity\PadelMatchComment::getPadelMatch</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#59">App\Entity\PadelMatchComment::setPadelMatch</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#66">App\Entity\PadelMatchComment::getUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#71">App\Entity\PadelMatchComment::setUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#78">App\Entity\PadelMatchComment::getContent</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#83">App\Entity\PadelMatchComment::setContent</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#90">App\Entity\PadelMatchComment::getCreatedAt</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchComment.php.html#95">App\Entity\PadelMatchComment::setCreatedAt</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentComment.php.html#24">App\Entity\PadelMatchCommentComment::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentComment.php.html#29">App\Entity\PadelMatchCommentComment::getMainComment</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentComment.php.html#34">App\Entity\PadelMatchCommentComment::setMainComment</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentComment.php.html#41">App\Entity\PadelMatchCommentComment::getReplyComment</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentComment.php.html#46">App\Entity\PadelMatchCommentComment::setReplyComment</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentLike.php.html#28">App\Entity\PadelMatchCommentLike::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentLike.php.html#33">App\Entity\PadelMatchCommentLike::getComment</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentLike.php.html#38">App\Entity\PadelMatchCommentLike::setComment</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentLike.php.html#45">App\Entity\PadelMatchCommentLike::getUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchCommentLike.php.html#50">App\Entity\PadelMatchCommentLike::setUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchLike.php.html#33">App\Entity\PadelMatchLike::setPadelMatch</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchLike.php.html#45">App\Entity\PadelMatchLike::setUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchPlayer.php.html#27">App\Entity\PadelMatchPlayer::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchPlayer.php.html#32">App\Entity\PadelMatchPlayer::getTeamNumber</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchPlayer.php.html#37">App\Entity\PadelMatchPlayer::setTeamNumber</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchPlayer.php.html#43">App\Entity\PadelMatchPlayer::getUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchPlayer.php.html#48">App\Entity\PadelMatchPlayer::setUser</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchPlayer.php.html#54">App\Entity\PadelMatchPlayer::getPadelMatch</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="PadelMatchPlayer.php.html#59">App\Entity\PadelMatchPlayer::setPadelMatch</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Team.php.html#36">App\Entity\Team::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Team.php.html#41">App\Entity\Team::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Team.php.html#46">App\Entity\Team::getUser1</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Team.php.html#51">App\Entity\Team::setUser1</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Team.php.html#58">App\Entity\Team::getUser2</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Team.php.html#63">App\Entity\Team::setUser2</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Team.php.html#70">App\Entity\Team::getName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Team.php.html#75">App\Entity\Team::setName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Team.php.html#85">App\Entity\Team::getTournamentTeams</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#47">App\Entity\Tournament::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#54">App\Entity\Tournament::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#59">App\Entity\Tournament::getName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#64">App\Entity\Tournament::setName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#71">App\Entity\Tournament::getDate</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#76">App\Entity\Tournament::setDate</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#83">App\Entity\Tournament::getClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#88">App\Entity\Tournament::setClub</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#98">App\Entity\Tournament::getTournamentFields</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#127">App\Entity\Tournament::getTournamentTeams</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="Tournament.php.html#157">App\Entity\Tournament::getTeam1</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentField.php.html#24">App\Entity\TournamentField::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentField.php.html#29">App\Entity\TournamentField::getTournament</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentField.php.html#34">App\Entity\TournamentField::setTournament</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentField.php.html#41">App\Entity\TournamentField::getField</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentField.php.html#46">App\Entity\TournamentField::setField</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#44">App\Entity\TournamentMatch::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#49">App\Entity\TournamentMatch::getTournament</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#54">App\Entity\TournamentMatch::setTournament</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#60">App\Entity\TournamentMatch::getTeam1</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#65">App\Entity\TournamentMatch::setTeam1</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#71">App\Entity\TournamentMatch::getTeam2</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#76">App\Entity\TournamentMatch::setTeam2</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#82">App\Entity\TournamentMatch::getWinner</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#87">App\Entity\TournamentMatch::setWinner</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#93">App\Entity\TournamentMatch::getRound</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#98">App\Entity\TournamentMatch::setRound</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#104">App\Entity\TournamentMatch::getMatchNumber</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#109">App\Entity\TournamentMatch::setMatchNumber</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#115">App\Entity\TournamentMatch::getTeam1Score</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#120">App\Entity\TournamentMatch::setTeam1Score</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#126">App\Entity\TournamentMatch::getTeam2Score</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentMatch.php.html#131">App\Entity\TournamentMatch::setTeam2Score</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentTeam.php.html#25">App\Entity\TournamentTeam::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentTeam.php.html#30">App\Entity\TournamentTeam::getTournament</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentTeam.php.html#35">App\Entity\TournamentTeam::setTournament</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentTeam.php.html#42">App\Entity\TournamentTeam::getTeam</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="TournamentTeam.php.html#47">App\Entity\TournamentTeam::setTeam</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#102">App\Entity\User::__construct</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#117">App\Entity\User::getId</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#122">App\Entity\User::getFirstName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#127">App\Entity\User::setFirstName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#133">App\Entity\User::getLastName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#138">App\Entity\User::setLastName</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#144">App\Entity\User::getUsername</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#149">App\Entity\User::setUsername</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#155">App\Entity\User::getEmail</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#160">App\Entity\User::setEmail</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#166">App\Entity\User::getPassword</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#171">App\Entity\User::setPassword</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#177">App\Entity\User::getBirthDate</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#182">App\Entity\User::setBirthDate</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#188">App\Entity\User::getProfilePicture</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#193">App\Entity\User::setProfilePicture</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#199">App\Entity\User::getRoles</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#204">App\Entity\User::setRoles</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#291">App\Entity\User::eraseCredentials</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#295">App\Entity\User::getUserIdentifier</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#303">App\Entity\User::getTeams</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#333">App\Entity\User::getFriends</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#363">App\Entity\User::getFriendRequests</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#393">App\Entity\User::getNotifications</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#482">App\Entity\User::isActive</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+  <tr><td><a href="User.php.html#487">App\Entity\User::setIsActive</a></td><td class="text-right">1</td><td class="text-right">100.0%</td></tr>
+ </tbody>
+</table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 14.1.8</a> using <a href="https://www.php.net/" target="_top">PHP 8.5.3</a> and <a href="https://phpunit.de/">PHPUnit 13.1.9</a> at Mon May 18 19:11:51 UTC 2026.</small>
+    </p>
+   </footer>
+  </div>
+ </body>
+</html>
