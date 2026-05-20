@@ -1,0 +1,166 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/notifications.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <script>
+        const searchFriendsUrl = "{{ path('searchFriends') }}";
+        const sendFriendRequestUrl = "{{ path('sendFriendRequest') }}";
+        const cancelFriendRequestUrl = "{{ path('cancelFriendRequest') }}";
+        const acceptFriendRequestUrl = "{{ path('acceptFriendRequest') }}";
+    </script>
+    <script defer src="{{ asset('js/friendrequests.js') }}"></script>
+
+    <div class="notifications-page">
+        <div class="notifications-container">
+            <div class="notifications-header">
+                <h1>Notifications</h1>
+                <p>Likes, comments, friend requests and match requests for {{ currentUserName }}</p>
+
+                {% if notifications is not empty %}
+                    <form method="post" action="{{ path('app_notifications_read_all') }}">
+                        <button type="submit" class="mark-all-button">
+                            Mark all as read
+                        </button>
+                    </form>
+                {% endif %}
+            </div>
+
+            {% if notifications is empty and friendrequestsReceived is empty %}
+                <div class="empty-notifications">
+                    <h2>No notifications yet</h2>
+                    <p>You do not have any notifications right now.</p>
+                </div>
+            {% else %}
+                <div class="notifications-list">
+
+                    {% for request in friendrequestsReceived %}
+                        <div class="notification-card unread">
+                            <div class="notification-icon">
+                                👥
+                            </div>
+
+                            <div class="notification-content">
+                                <div class="notification-top">
+                                    <h2>Friend request</h2>
+                                    <span class="unread-badge">New</span>
+                                </div>
+
+                                <div class="friend-request-notification">
+                                    {% set profilePicture = request.senderUser.profilePicture %}
+
+                                    {% if profilePicture %}
+                                        {% if profilePicture starts with '/' %}
+                                            {% set profilePictureSrc = profilePicture %}
+                                        {% else %}
+                                            {% set profilePictureSrc = asset('uploads/profile_pictures/' ~ profilePicture) %}
+                                        {% endif %}
+                                    {% else %}
+                                        {% set profilePictureSrc = asset('uploads/profile_pictures/default.png') %}
+                                    {% endif %}
+
+                                    <img
+                                        src="{{ profilePictureSrc }}"
+                                        alt="profile"
+                                        width="40"
+                                        class="friend-request-profile-picture"
+                                    >
+
+                                    <p>
+                                        <strong>{{ request.senderUser.username }}</strong>
+                                        sent you a friend request.
+                                    </p>
+                                </div>
+
+                                <div class="notification-actions">
+                                    <button
+                                        type="button"
+                                        class="acceptFriendRequestReceivedButton notification-action-button"
+                                        data-request-id="{{ request.id }}"
+                                    >
+                                        Accept
+                                    </button>
+
+                                    <button
+                                        type="button"
+                                        class="deleteFriendRequestReceivedButton notification-delete-button"
+                                        data-request-id="{{ request.id }}"
+                                    >
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    {% for notification in notifications %}
+                        <div class="notification-card {% if not notification.isRead %}unread{% endif %}">
+                            <div class="notification-icon">
+                                {% if notification.type == 'friend_request' %}
+                                    👥
+                                {% elseif notification.type == 'match_request' %}
+                                    🎾
+                                {% elseif notification.type == 'like' %}
+                                    ❤️
+                                {% elseif notification.type == 'comment' %}
+                                    💬
+                                {% else %}
+                                    🔔
+                                {% endif %}
+                            </div>
+
+                            <div class="notification-content">
+                                <div class="notification-top">
+                                    <h2>
+                                        {% if notification.type == 'friend_request' %}
+                                            Friend request
+                                        {% elseif notification.type == 'match_request' %}
+                                            Match request
+                                        {% elseif notification.type == 'like' %}
+                                            New like
+                                        {% elseif notification.type == 'comment' %}
+                                            New comment
+                                        {% else %}
+                                            Notification
+                                        {% endif %}
+                                    </h2>
+
+                                    {% if not notification.isRead %}
+                                        <span class="unread-badge">New</span>
+                                    {% endif %}
+                                </div>
+
+                                <p>{{ notification.message }}</p>
+
+                                <span class="notification-date">
+                                    {{ notification.createdAt|date('d/m/Y H:i') }}
+                                </span>
+
+                                <div class="notification-actions">
+                                    {% if not notification.isRead %}
+                                        <form method="post" action="{{ path('app_notification_read', { id: notification.id }) }}">
+                                            <button type="submit" class="notification-action-button">
+                                                Mark as read
+                                            </button>
+                                        </form>
+                                    {% endif %}
+
+                                    <form method="post" action="{{ path('app_notification_delete', { id: notification.id }) }}">
+                                        <button type="submit" class="notification-delete-button">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

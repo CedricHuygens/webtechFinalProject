@@ -1,0 +1,84 @@
+{% extends "base.html.twig" %}
+{% block stylesheets %}
+    <link href="{{ asset('css/profileSettings.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+    <script defer src="{{ asset('js/profileSettings.js') }}"></script>
+    <div id="profileSettingsPage">
+        <div id="fullForm">
+            <form id="updateProfileForm" method="post" action="{{ path('updateProfile') }}" enctype="multipart/form-data"> {# enctype is om te zeggen dat form bestanden bevat, om het op een speciale manier te versturen #}
+
+                <div id="profilePictureSection">
+                    <img
+                        id="previewImage"
+                        src="{{ asset(profilePicture ?? 'uploads/profile_pictures/default.png')}}" {# asset om juist URL-pad te vinden, zet pad relatief aan public/ #}
+                        alt="Profile picture"
+                    />
+                    <div id="profilePictureControl">
+                        <button onclick="return confirm('Are you sure you want to delete your profile picture?')" name="deleteProfilePicture" type="submit" value="1">Delete Profile Picture</button>
+                        <p>Change Profile Picture: </p>
+                        <input type="file" name="profilePicture" id="profilePicture" accept="image/*">
+                    </div>
+                </div>
+
+                <p>Change First Name:</p>
+                <input type="text" name="firstName" placeholder="Enter new first name">
+
+                <p>Change Last Name:</p>
+                <input type="text" name="lastName" placeholder="Enter new last name">
+
+                <p>Change Username:</p>
+                <input type="text" name="username" placeholder="Enter new username">
+                <span id="changeUsernameStatusMessage" class="status-message" hidden></span>
+
+                <p>Change Email:</p>
+                <input type="text" name="email" placeholder="Enter new email">
+                <span id="changeEmailStatusMessage" class="status-message" hidden></span>
+
+                <p>Change Birthdate:</p>
+                <input type="date" name="birthDate">
+
+                <button id="saveChangesBtn" type="submit">Save Changes</button>
+            </form>
+
+            <div id="changePasswordSection">
+                <form id="changePasswordForm" method="post" action="{{ path('changePassword') }}">
+                    <button type="button" id="changePasswordButton">Change Password</button>
+
+                    <div id="changePasswordPopup" class="popup">
+                        <p>Change your password:</p>
+                        <input type="password" id="oldPassword" name="oldPassword" placeholder="Enter old password">
+                        <span id="changePasswordOldPassword" class="status-message" hidden></span>
+                        <input type="password" id="password1" name="password1" placeholder="Enter new password">
+                        <span id="changePasswordNewPassword1" class="status-message" hidden></span>
+                        <input type="password" id="password2" name="password2" placeholder="Enter new password again">
+                        <span id="changePasswordNewPassword2" class="status-message" hidden></span>
+                        <button type="button" id="confirmPasswordChange">Confirm</button>
+                        <button type="button" id="cancelPasswordChange">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <div id="bottomButtons">
+                <form id="logoutForm" method="post" action="{{ path('logout') }}">
+                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('logout') }}"> {# Zodat enkel logout als op button wordt geduwd en niet bij elke redirect! (security) #}
+                    <button type="submit" id="logout">Logout</button>
+                </form>
+
+                <form id="deleteForm" method="post" action="{{ path('deleteAccount') }}">
+                    <button type="button" id="deleteAccountButton">Delete Account</button>
+                </form>
+            </div>
+        </div>
+
+        <a href="{{ path('profile') }}" class="backButton">⬅ Back</a>
+    </div>
+
+    <div id="confirmPopup" class="popup">
+        <p>Are you sure you want to delete your account?</p>
+        <button type="button" id="confirmYes">Yes</button>
+        <button type="button" id="confirmNo">No</button>
+    </div>
+
+{% endblock %}

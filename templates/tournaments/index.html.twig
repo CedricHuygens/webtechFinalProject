@@ -1,0 +1,199 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/tournaments.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div id="tournaments-page">
+    <h1 class="main-title">Tournaments</h1>
+
+    {% for message in app.flashes('error') %}
+        <div class="flash-error">{{ message }}</div>
+    {% endfor %}
+
+    {% for message in app.flashes('success') %}
+        <div class="flash-success">{{ message }}</div>
+    {% endfor %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class="add-tournament-wrapper">
+            <a href="{{ path('app_tournaments_add') }}" class="btn-enroll">
+                Add Tournament
+            </a>
+        </div>
+    {% endif %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class="results-container">
+            <h2 class="section-title">My club tournaments</h2>
+
+            {% for tournament in availableTournaments %}
+                <div class="tournament-card-row">
+                    <div class="tournament-info">
+                        <strong class="tournament-name">{{ tournament.name }}</strong>
+                        <span class="tournament-detail">{{ tournament.club.name }}</span>
+                        <span class="tournament-detail">{{ tournament.date|date('d-m-Y') }}</span>
+                    </div>
+
+                    <div class="tournament-actions">
+                        <a href="{{ path('app_tournament_results', { id: tournament.id }) }}" class="btn-search">
+                            Results
+                        </a>
+
+                        <form method="post" action="{{ path('app_tournament_delete', { id: tournament.id }) }}">
+                            <button type="submit" class="btn-cancel">
+                                Delete
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            {% else %}
+                <p class="empty-message">No tournaments.</p>
+            {% endfor %}
+
+            {% if finishedTournaments|length > 0 %}
+                <h2 class="section-title">Finished tournaments</h2>
+
+                {% for tournament in finishedTournaments %}
+                    <div class="tournament-card-row">
+                        <div class="tournament-info">
+                            <strong class="tournament-name">{{ tournament.name }}</strong>
+                            <span class="tournament-detail">{{ tournament.club.name }}</span>
+                            <span class="tournament-detail">{{ tournament.date|date('d-m-Y') }}</span>
+                        </div>
+
+                        <div class="tournament-actions">
+                            <a href="{{ path('app_tournament_results', { id: tournament.id }) }}" class="btn-search">
+                                Results
+                            </a>
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <form method="post" action="{{ path('app_tournament_delete', { id: tournament.id }) }}">
+                                    <button type="submit" class="btn-cancel">
+                                        Delete
+                                    </button>
+                                </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% else %}
+        <div class="columns-layout">
+            <div class="column main-column">
+                <h2 class="section-title">Available tournaments</h2>
+
+                <div class="filter-bar">
+                    <form method="GET">
+                        <div class="filter-group">
+                            <label>Club</label>
+                            <select name="club">
+                                <option value="">All clubs</option>
+                                {% for club in clubs %}
+                                    <option value="{{ club.id }}" {% if club.id == selectedClub %}selected{% endif %}>
+                                        {{ club.name }}
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label>Date</label>
+                            <input type="date" name="date" value="{{ selectedDate }}">
+                        </div>
+
+                        <div class="filter-actions">
+                            <button type="submit" class="btn-enroll">Filter</button>
+                            <a href="{{ path('app_tournaments') }}" class="btn-clear">Clear</a>
+                        </div>
+                    </form>
+                </div>
+
+                {% for tournament in availableTournaments %}
+                    <div class="tournament-card-row">
+                        <div class="tournament-info">
+                            <strong class="tournament-name">{{ tournament.name }}</strong>
+                            <span class="tournament-detail">{{ tournament.club.name }}</span>
+                            <span class="tournament-detail">{{ tournament.date|date('d-m-Y') }}</span>
+                        </div>
+
+                        <div class="tournament-actions">
+                            <a href="{{ path('app_tournament_enroll', { id: tournament.id }) }}" class="btn-enroll">
+                                Enroll
+                            </a>
+                        </div>
+                    </div>
+                {% else %}
+                    <p class="empty-message">No available tournaments.</p>
+                {% endfor %}
+            </div>
+
+            <div class="side-column">
+                <div class="column">
+                    <h2 class="section-title">My tournaments</h2>
+
+                    {% for tournament in myTournaments %}
+                        <div class="tournament-card-row">
+                            <div class="tournament-info">
+                                <strong class="tournament-name">{{ tournament.name }}</strong>
+                                <span class="tournament-detail">{{ tournament.club.name }}</span>
+                                <span class="tournament-detail">{{ tournament.date|date('d-m-Y') }}</span>
+
+                                {% if enrolledTeams[tournament.id] is defined %}
+                                    <span class="tournament-enrolled-info">
+                                        Enrolled with:
+                                        <strong>{{ enrolledTeams[tournament.id].name }}</strong>
+                                        —
+                                        {{ enrolledTeams[tournament.id].user1.firstName }}
+                                        {{ enrolledTeams[tournament.id].user1.lastName }}
+                                        &
+                                        {{ enrolledTeams[tournament.id].user2.firstName }}
+                                        {{ enrolledTeams[tournament.id].user2.lastName }}
+                                    </span>
+                                {% endif %}
+                            </div>
+
+                            <div class="tournament-actions">
+                                {% if tournament.id in resultTournamentIds %}
+                                    <a href="{{ path('app_tournament_results', { id: tournament.id }) }}" class="btn-search">
+                                        Results
+                                    </a>
+                                {% else %}
+                                    <a href="{{ path('app_tournament_cancel', { id: tournament.id }) }}" class="btn-enroll btn-enrolled">
+                                        Cancel
+                                    </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% else %}
+                        <p class="empty-message">No enrolled tournaments.</p>
+                    {% endfor %}
+                </div>
+
+                <div class="column">
+                    <h2 class="section-title">Finished tournaments</h2>
+
+                    {% for tournament in finishedTournaments %}
+                        <div class="tournament-card-row">
+                            <div class="tournament-info">
+                                <strong class="tournament-name">{{ tournament.name }}</strong>
+                                <span class="tournament-detail">{{ tournament.club.name }}</span>
+                                <span class="tournament-detail">{{ tournament.date|date('d-m-Y') }}</span>
+                            </div>
+
+                            <div class="tournament-actions">
+                                <a href="{{ path('app_tournament_results', { id: tournament.id }) }}" class="btn-search">
+                                    Results
+                                </a>
+                            </div>
+                        </div>
+                    {% else %}
+                        <p class="empty-message">No finished tournaments.</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

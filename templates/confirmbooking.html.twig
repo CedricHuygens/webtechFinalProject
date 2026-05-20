@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/fields.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div id="fields-page">
+    <h1 class="main-title">Confirm</h1>
+
+    <div class="field-card">
+        <h2 class="field-location-title">{{ field.location }}</h2>
+        <p class="field-sub-text">Court {{ field.fieldNumber }} ({{ field.type }})</p>
+
+        <div class="info-box">
+            <p><strong>DATE:</strong> {{ date|date('d-m-Y') }}</p>
+            <p><strong>TIME:</strong> {{ time }}</p>
+            <p><strong>DURATION:</strong> {{ duration }} hour(s)</p>
+        </div>
+
+        <div class="booking-actions">
+            <form action="{{ path('app_booking_final') }}" method="POST">
+                <input type="hidden" name="field_id" value="{{ field.id }}">
+                <input type="hidden" name="date" value="{{ date }}">
+                <input type="hidden" name="time" value="{{ time }}">
+                <input type="hidden" name="duration" value="{{ duration }}">
+                <button type="submit" class="comfirmBookingButton">Confirm Booking</button>
+            </form>
+            <a href="javascript:history.back()" class="btn-search">← Back to results</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

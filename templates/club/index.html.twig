@@ -1,0 +1,166 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/club.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div class="club-page">
+    <div class="club-container">
+
+        {% set success = app.flashes('club_success')|first %}
+        {% if success %}
+            <div class="flash-success">
+                {{ success }}
+            </div>
+        {% endif %}
+
+        {% set error = app.flashes('club_error')|first %}
+        {% if error %}
+            <div class="flash-error">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        {% if club %}
+            <h1 class="club-title">{{ club.name }}</h1>
+
+            {% if clubUsers is empty %}
+                <div class="club-empty">
+                    No users attached to this club.
+                </div>
+            {% else %}
+                <div class="club-grid">
+                    {% set currentUser = app.user %}
+
+                    {% for clubUser in clubUsers %}
+                        {% if clubUser.user.id == currentUser.id %}
+                            <div class="club-card club-card-me">
+                                <div class="club-user-info">
+                                    <span class="club-user-name">
+                                        {{ clubUser.user.firstName }} {{ clubUser.user.lastName }}
+                                        <span class="me-badge">You</span>
+                                    </span>
+
+                                    <span class="club-user-email">
+                                        {{ clubUser.user.email }}
+                                    </span>
+
+                                    <span class="club-user-date">
+                                        Joined: {{ clubUser.createdAt|date('d-m-Y') }}
+                                    </span>
+                                </div>
+
+                                {% if not is_granted('ROLE_ADMIN') %}
+                                    <form method="post" action="{{ path('club_leave') }}">
+                                        <button class="club-leave-btn" type="submit">
+                                            Leave
+                                        </button>
+                                    </form>
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% for clubUser in clubUsers %}
+                        {% if clubUser.user.id != currentUser.id %}
+                            <div class="club-card">
+                                <div class="club-user-info">
+                                    <span class="club-user-name">
+                                        {{ clubUser.user.firstName }} {{ clubUser.user.lastName }}
+                                    </span>
+
+                                    <span class="club-user-email">
+                                        {{ clubUser.user.email }}
+                                    </span>
+
+                                    <span class="club-user-date">
+                                        Joined: {{ clubUser.createdAt|date('d-m-Y') }}
+                                    </span>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+        {% else %}
+
+            {% if is_granted('ROLE_ADMIN') %}
+                <h1 class="club-title">My club</h1>
+
+                {% if clubs is empty %}
+                    <div class="club-empty">
+                        No clubs attached to this admin.
+                    </div>
+                {% else %}
+                    {% for adminClub in clubs %}
+                        <h2 class="club-title">{{ adminClub.name }}</h2>
+
+                        {% set users = clubUsersByClub[adminClub.id] ?? [] %}
+
+                        {% if users is empty %}
+                            <div class="club-empty">
+                                No users attached to this club.
+                            </div>
+                        {% else %}
+                            <div class="club-grid">
+                                {% for clubUser in users %}
+                                    <div class="club-card">
+                                        <div class="club-user-info">
+                                            <span class="club-user-name">
+                                                {{ clubUser.user.firstName }} {{ clubUser.user.lastName }}
+                                            </span>
+
+                                            <span class="club-user-email">
+                                                {{ clubUser.user.email }}
+                                            </span>
+
+                                            <span class="club-user-date">
+                                                Joined: {{ clubUser.createdAt|date('d-m-Y') }}
+                                            </span>
+                                        </div>
+
+                                        <form method="post" action="{{ path('admin_club_remove_user', { id: clubUser.id }) }}">
+                                            <button class="club-remove-btn" type="submit">
+                                                Remove
+                                            </button>
+                                        </form>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+
+            {% else %}
+                <h1 class="club-title">Enroll in a club</h1>
+
+                {% if clubs is empty %}
+                    <div class="club-empty">No clubs available.</div>
+                {% else %}
+                    <div class="club-grid">
+                        {% for club in clubs %}
+                            <div class="club-card">
+                                <div class="club-user-info">
+                                    <span class="club-user-name">
+                                        {{ club.name }}
+                                    </span>
+                                </div>
+
+                                <form method="post" action="{{ path('club_enroll', { id: club.id }) }}">
+                                    <button class="club-join-btn" type="submit">
+                                        Join
+                                    </button>
+                                </form>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endif %}
+
+        {% endif %}
+
+    </div>
+</div>
+{% endblock %}

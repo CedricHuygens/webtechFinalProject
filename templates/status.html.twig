@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/fields.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div id="fields-page">
+    <h1 class="main-title">Confirmed</h1>
+
+    <div class="field-card">
+        <h2 class="field-location-title">Booking Secured!</h2>
+        <p>Thanks, {{ booking.user.firstName }}!</p>
+
+        <div class="info-box">
+            <p><strong>FIELD:</strong> {{ booking.field.location }} - Court {{ booking.field.fieldNumber }}</p>
+            <p><strong>DATE:</strong> {{ booking.date|date('d-m-Y') }}</p>
+            <p><strong>TIME:</strong> {{ booking.startTime|date('H:i') }}</p>
+        </div>
+
+        <form action="{{ path('app_booking_delete', {'id': booking.id}) }}" method="POST">
+            <button type="submit" class="btn-cancel">Cancel Booking</button>
+        </form>
+
+        <div style="margin-top: 30px;">
+            <a href="{{ path('app_fields') }}" class="btn-search">Back</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

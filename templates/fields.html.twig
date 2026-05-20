@@ -1,0 +1,197 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/fields.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div id="fields-page">
+    <h1 class="main-title">Fields</h1>
+
+    {% for message in app.flashes('error') %}
+        <div class="flash-error">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+
+    {% for message in app.flashes('success') %}
+        <div class="flash-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('admin_field_new') }}" class="btn-search">Admin field</a>
+    {% endif %}
+
+    <form id="filter-section" action="{{ path('app_fields') }}" method="GET">
+        <div class="col-left">
+            <div class="filter-group">
+                <label>Club</label>
+                <div class="grid-input-wrapper">
+                    <select name="club" class="custom-dropdown" onchange="this.form.submit()">
+                        <option value="">All clubs</option>
+                        {% for club in clubs %}
+                            <option value="{{ club.id }}" {{ selectedClub == club.id ? 'selected' : '' }}>
+                                {{ club.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-right">
+            <div class="filter-group">
+                <label>Date</label>
+                <div class="grid-input-wrapper">
+                    <input type="date"
+                           name="search_date"
+                           class="date-input-full"
+                           value="{{ searchDate ? searchDate : "now"|date("Y-m-d") }}"
+                           min="{{ "now"|date("Y-m-d") }}"
+                           onchange="
+                               const form = this.form;
+                               const clubSelect = form.querySelector('select[name=club]');
+                               const durationSelect = form.querySelector('select[name=duration]');
+
+                               const params = new URLSearchParams();
+                               params.set('search_date', this.value);
+
+                               if (clubSelect && clubSelect.value) {
+                                   params.set('club', clubSelect.value);
+                               }
+
+                               if (durationSelect && durationSelect.value) {
+                                   params.set('duration', durationSelect.value);
+                               }
+
+                               window.location.href = form.action + '?' + params.toString();
+                           ">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Time</label>
+                <div class="grid-input-wrapper">
+                    <select name="time" class="custom-dropdown">
+                        {% for timeValue in allowedTimes %}
+                            <option value="{{ timeValue }}" {{ selectedTime == timeValue ? 'selected' : '' }}>
+                                {{ timeValue }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Hours</label>
+                <div class="grid-input-wrapper">
+                    <select name="duration" class="custom-dropdown">
+                        <option value="1" {{ selectedDuration == 1 ? 'selected' : '' }}>1 hour</option>
+                        <option value="2" {{ selectedDuration == 2 ? 'selected' : '' }}>2 hours</option>
+                        <option value="3" {{ selectedDuration == 3 ? 'selected' : '' }}>3 hours</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="search-btn-container">
+                <button type="submit" name="search" value="1" class="btn-search">
+                    Search
+                </button>
+            </div>
+        </div>
+    </form>
+
+    {% if errorMessage %}
+        <div class="no-results">
+            <p>{{ errorMessage }}</p>
+        </div>
+
+    {% elseif hasSearched and searchDate and selectedTime %}
+        <h2 class="results-title">
+            Fields Available on {{ searchDate|date('d-m-Y') }} at {{ selectedTime }}
+        </h2>
+
+        <div class="results-container">
+            {% for card in fieldCards %}
+                {% if card.status != 'unavailable' %}
+                    {% set field = card.field %}
+                    <div class="field-card-row">
+                        <div class="field-info">
+                            <strong class="field-name">
+                                {{ field.club.name }} - {{ field.location }} - Court {{ field.fieldNumber }}
+                            </strong><br>
+                            <span class="field-type-label">
+                                Type: {{ field.type }}
+                            </span>
+                        </div>
+
+                        <div class="field-actions">
+                            {% if card.status == 'available' %}
+                                <a href="{{ path('app_booking_confirm', {
+                                    'fieldId': field.id,
+                                    'date': searchDate,
+                                    'time': selectedTime,
+                                    'duration': selectedDuration
+                                }) }}" class="btn-search">
+                                    Book Now
+                                </a>
+
+                            {% elseif card.status == 'mine' %}
+                                <form method="post" action="{{ path('app_booking_delete', { id: card.booking.id }) }}">
+                                    <button type="submit" class="btn-cancel">Cancel</button>
+                                </form>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endif %}
+            {% else %}
+                <div class="no-results">
+                    <p>No fields found for this timestamp.</p>
+                </div>
+            {% endfor %}
+        </div>
+
+    {% else %}
+        {% if futureBookings is not empty %}
+            <h2 class="results-title">My upcoming bookings</h2>
+
+            <div class="results-container">
+                {% for booking in futureBookings %}
+                    <div class="field-card-row">
+                        <div class="field-info">
+                            <strong class="field-name">
+                                {{ booking.field.club.name }} - {{ booking.field.location }} - Court {{ booking.field.fieldNumber }}
+                            </strong><br>
+                            <span>
+                                {{ booking.date|date('d-m-Y') }}
+                                from {{ booking.startTime|date('H:i') }}
+                                to {{ booking.endTime|date('H:i') }}
+                            </span>
+                            {% if weatherByBooking[booking.id] is defined %}
+                                {% set w = weatherByBooking[booking.id] %}
+                                <div class="weather-badge">
+                                    <img src="https://openweathermap.org/img/wn/{{ w.icon }}@2x.png" alt="{{ w.desc }}">
+                                    <span>{{ w.desc|capitalize }} · 🌡️ {{ w.temp }}°C · 💧{{ w.rain_chance }}% · 💨 {{ w.wind }} m/s</span>
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="field-actions">
+                            <form method="post" action="{{ path('app_booking_delete', { id: booking.id }) }}">
+                                <button type="submit" class="btn-cancel">Cancel</button>
+                            </form>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="search-prompt">
+                <p>Select a date and time to see available courts.</p>
+            </div>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

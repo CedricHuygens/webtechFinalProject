@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link href="{{ asset('css/fields.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+<div id="fields-page">
+    <h1 class="main-title">Closing days</h1>
+
+    <form method="POST" action="{{ path('admin_closures') }}" id="filter-section">
+        <div class="filter-group">
+            <label>Date</label>
+            <input type="date" name="date" class="date-input-full" required>
+        </div>
+
+        <div class="filter-group">
+            <label>Reason</label>
+            <input type="text" name="reason" class="date-input-full" placeholder="Holiday, maintenance..." required>
+        </div>
+
+        <button type="submit" class="btn-search">Add closing day</button>
+    </form>
+
+    <div class="results-container">
+        {% for closure in closures %}
+            <div class="field-card-row">
+                <div class="field-info">
+                    <strong>{{ closure.date|date('d-m-Y') }}</strong>
+                    <span>{{ closure.reason }}</span>
+                </div>
+            </div>
+        {% else %}
+            <p>No closing days yet.</p>
+        {% endfor %}
+    </div>
+
+    <a href="{{ path('admin_field_new') }}" class="btn-search" style="margin-top: 30px;">Back</a>
+</div>
+{% endblock %}

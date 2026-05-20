@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/tournaments.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div id="tournaments-page">
+    <h1 class="main-title">Enroll in {{ tournament.name }}</h1>
+
+    <form method="post" class="tournament-form">
+        <label>Select your team</label>
+
+        <select name="team_id" required>
+            {% for team in teams %}
+                <option value="{{ team.id }}">{{ team.name }}</option>
+            {% else %}
+                <option disabled>No teams found</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit" class="btn-enroll">
+            Enroll
+        </button>
+    </form>
+</div>
+{% endblock %}

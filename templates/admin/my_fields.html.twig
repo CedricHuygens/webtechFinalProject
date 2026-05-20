@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/fields.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div id="fields-page">
+
+    <h1 class="main-title">My fields</h1>
+
+    {% set error = app.flashes('error')|first %}
+    {% if error %}
+        <div class="flash-message flash-error">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    {% set success = app.flashes('success')|first %}
+    {% if success %}
+        <div class="flash-message flash-success">
+            {{ success }}
+        </div>
+    {% endif %}
+
+    <form method="post" action="{{ path('admin_field_add') }}" id="filter-section">
+
+        <div class="filter-group">
+            <label>Location</label>
+            <input class="custom-dropdown" type="text" name="location" required>
+        </div>
+
+        <div class="filter-group">
+            <label>Type</label>
+            <select class="custom-dropdown" name="type" required>
+                <option value="">Choose type</option>
+                <option value="indoor">Indoor</option>
+                <option value="outdoor">Outdoor</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Court number</label>
+            <input class="custom-dropdown" type="number" name="field_number" min="1" required>
+        </div>
+
+        <button class="btn-search" type="submit">Add new field</button>
+    </form>
+
+    <div class="results-container">
+        {% for field in fields %}
+            <div class="field-card-row">
+
+                <div class="field-info">
+                    <strong>
+                        {{ field.club.name }} - {{ field.location }} - Court {{ field.fieldNumber }}
+                    </strong>
+
+                    <span>Type: {{ field.type }}</span>
+
+                    {% set hasBooking = false %}
+
+                    {% for booking in bookings %}
+                        {% if booking.field.id == field.id %}
+                            {% set hasBooking = true %}
+                            <span>
+                                Booked on {{ booking.date|date('d-m-Y') }}
+                                from {{ booking.startTime|date('H:i') }}
+                                to {{ booking.endTime|date('H:i') }}
+                                by {{ booking.user.firstName }} {{ booking.user.lastName }}
+                            </span>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% set hasTournament = false %}
+
+                    {% for tournamentField in tournamentFields %}
+                        {% if tournamentField.field.id == field.id %}
+                            {% set hasTournament = true %}
+                            <span>
+                                Tournament on {{ tournamentField.tournament.date|date('d-m-Y') }}:
+                                {{ tournamentField.tournament.name }}
+                            </span>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if not hasBooking and not hasTournament %}
+                        <span>No bookings or tournaments yet.</span>
+                    {% endif %}
+                </div>
+
+                <div class="field-actions">
+                    <form method="post" action="{{ path('admin_field_delete', { id: field.id }) }}">
+                        <button type="submit" class="btn-cancel">
+                            Delete
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        {% else %}
+            <p>No fields found for your club.</p>
+        {% endfor %}
+    </div>
+
+    <a href="{{ path('admin_field_new') }}" class="btn-search" style="margin-top: 30px;">
+        Back
+    </a>
+
+</div>
+{% endblock %}

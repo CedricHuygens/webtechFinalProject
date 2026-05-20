@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/feed.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+    <div class="feed-page">
+        <div class="feed-container">
+            <div class="match-card add-match-card">
+
+                <div class="form-card-header">
+                    <a href="{{ path('app_feed') }}" class="form-back-button">
+                        ← Back
+                    </a>
+
+                    <h2>Team Mate Request</h2>
+                </div>
+
+                <form method="post" class="add-match-form">
+                    <div class="form-group">
+                        <label>Team name</label>
+                        <input type="text" name="team_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Friend</label>
+                        <select name="friend_id" required>
+                            <option value="">Select a friend</option>
+
+                            {% for friend in friends %}
+                                <option value="{{ friend.id }}">
+                                    {{ friend.firstName }} {{ friend.lastName }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <button type="submit" class="form-submit-button">
+                        Send Request
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

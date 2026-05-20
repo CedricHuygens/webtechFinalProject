@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ asset('css/baseStyle.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/loginRegister.css') }}" rel="stylesheet" />
+</head>
+<body>
+    <div class="login">
+        <div class="login-form">
+            <main>
+                <h1>CourtConnect</h1>
+
+                {% if error %}
+                    <span class="status-message error">
+                         Invalid email or password. Please try again.
+                    </span>
+                {% endif %}
+
+                <form method="post">
+                    <input type="email"
+                           id="form_email"
+                           name="_username"
+                           value="{{ last_username }}"
+                           placeholder="Email"
+                           required autofocus>
+
+                    <input type="password"
+                           id="form_password"
+                           name="_password"
+                           placeholder="Password"
+                           required>
+{#                    Omdat CSRF geactiveerd is in security.yaml is het nooddzakelijk dit hier mee tegeven. Het vermijd zo CSRF-aanvallen dat via andere domeinen acites op onze site worden uitgevoerd.#}
+                    <input type="hidden"
+                           name="_csrf_token"
+                           value="{{ csrf_token('authenticate') }}">
+
+                    <button id="loginButton" type="submit">Login</button>
+                </form>
+
+                Don't have an account?
+                <a href="{{ path('register') }}">Create one.</a>
+            </main>
+        </div>
+    </div>
+</body>

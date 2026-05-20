@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/friends.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+    <script defer src="{{ asset('js/friends.js') }}"></script>
+    <div class="friendsPage">
+        <div id="overviewFriends">
+            <div class="friendsHeader">
+                <p>Your Friends:</p>
+                <a href="{{ path('friendrequests') }}" id="goToFriendRequestButton">
+                    Manage Friendrequests
+                </a>
+            </div>
+            <div id="friendList">
+                {% for user in friends %}
+                    <div>
+                        <img
+                            src="{{ user.profilePicture ?? 'uploads/profile_pictures/default.png' }}"
+                            alt="profile"
+                            width="40"
+                        >
+                        <span class="username">{{ user.username }}</span>
+                        <button class="deleteFriendButton" data-user-id="{{ user.id }}">Delete</button>
+                    </div>
+
+                {% else %}
+                    <p class="no-friends">No friends yet, add some!</p>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

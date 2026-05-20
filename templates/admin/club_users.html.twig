@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/fields.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div id="fields-page">
+    <h1 class="main-title">Users - {{ club.name }}</h1>
+
+    <div class="results-container">
+        {% for clubUser in clubUsers %}
+            <div class="field-card-row">
+                <div class="field-info">
+                    <strong>{{ clubUser.user.firstName }} {{ clubUser.user.lastName }}</strong>
+                    <span>{{ clubUser.user.email }}</span>
+                    <span>Joined: {{ clubUser.createdAt|date('d-m-Y') }}</span>
+                </div>
+            </div>
+        {% else %}
+            <p>No users found for this club.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html.twig" %}
+{% block stylesheets %}
+    <link href="{{ asset('css/teams.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+    <div class="teamsPage">
+        <div class="teamForm">
+        <script defer src="{{ asset('js/teams.js') }}"></script>
+        {{ form_start(teamForm) }}
+            {% for message in app.flashes('error') %}
+                <span class="status-message">{{ message }}</span>
+            {% endfor %}
+        <datalist id="friendsList">
+            {% for friend in availableFriends %}
+                <option value="{{ friend.username }}">
+                    {{ friend.firstName }} {{ friend.lastName }}
+                </option>
+            {% endfor %}
+        </datalist>
+
+
+        {{ form_widget(teamForm.teamMate, {'attr': {
+            'list': 'friendsList',
+            'placeholder': 'Find Your Teammate (username)',
+            'autocomplete': 'off'
+        }}) }}
+        {{ form_widget(teamForm.teamName, {'attr': {'placeholder': 'Team Name', 'autocomplete': 'off'}}) }}
+
+        <button id="applyButton" type="submit" disabled>Apply</button>
+        {{ form_end(teamForm) }}
+        </div>
+        <hr>
+        <div class="teamsList">
+            {% for team in teams %}
+                <div class="team">
+                    <h3>{{ team.name }}</h3>
+                    <div class="teamInfo">
+                    <img src="{{ team.user1.profilePicture ?? '/uploads/profile_pictures/default.png'}}" alt="Profile picture" style="max-width:40px;">
+                        <div class="teamMemberInfo" id="member1">
+                            <span class="name">{{ team.user1.firstName }} {{ team.user1.lastName }}</span>
+                            <span class="username">@{{ team.user1.username }}</span>
+                        </div>
+                    <img src="{{ team.user2.profilePicture ?? '/uploads/profile_pictures/default.png'}}" alt="Profile picture" style="max-width:40px;">
+                    <div class="teamMemberInfo" id="member2">
+                        <span class="name">{{ team.user2.firstName }} {{ team.user2.lastName }}</span>
+                        <span class="username">@{{ team.user2.username }}</span>
+                    </div>
+                    </div>
+                    <a href="{{ path('teams_leave', { id: team.id }) }}"
+                       onclick="return confirm('Are you sure you want to leave the team? This will delete all played matches with this team!')">
+                        Leave
+                    </a>
+                    </div>
+
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

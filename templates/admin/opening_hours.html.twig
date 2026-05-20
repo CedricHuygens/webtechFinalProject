@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link href="{{ asset('css/fields.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+<div id="fields-page">
+    <h1 class="main-title">Opening hours</h1>
+
+    <form method="POST" action="{{ path('admin_opening_hours') }}" class="results-container">
+        {% for hour in hours %}
+            <div class="field-card-row">
+                <div class="field-info">
+                    <strong>{{ hour.dayOfWeek|capitalize }}</strong>
+                </div>
+
+                <div class="field-actions">
+                    <input type="time"
+                           name="open_time_{{ hour.id }}"
+                           value="{{ hour.openTime|date('H:i') }}"
+                           class="date-input-full"
+                           required>
+
+                    <input type="time"
+                           name="close_time_{{ hour.id }}"
+                           value="{{ hour.closeTime|date('H:i') }}"
+                           class="date-input-full"
+                           required>
+
+                    <a href="{{ path('admin_opening_hours_delete', { id: hour.id }) }}"
+                       class="btn-cancel">
+                        Delete
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+
+        <button type="submit" class="btn-search">Save changes</button>
+    </form>
+
+    <h2 class="results-title">Add opening day</h2>
+
+    <form method="POST" action="{{ path('admin_opening_hours_add') }}" id="filter-section">
+        <div class="filter-group">
+            <label>Day</label>
+            <select name="day_of_week" class="custom-dropdown" required>
+                {% for day in availableDays %}
+                    <option value="{{ day }}">{{ day|capitalize }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label>Open</label>
+            <input type="time" name="open_time" class="date-input-full" required>
+        </div>
+
+        <div class="filter-group">
+            <label>Close</label>
+            <input type="time" name="close_time" class="date-input-full" required>
+        </div>
+
+        <button type="submit" class="btn-search">Add day</button>
+    </form>
+
+    <a href="{{ path('admin_field_new') }}" class="btn-search" style="margin-top: 30px;">Back</a>
+</div>
+{% endblock %}

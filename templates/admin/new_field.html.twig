@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link href="{{ asset('css/fields.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+<div id="fields-page">
+    <h1 class="main-title">Admin fields</h1>
+
+    <div class="results-container">
+        <a href="{{ path('admin_closures') }}" class="btn-search">Add closing days</a>
+        <a href="{{ path('admin_opening_hours') }}" class="btn-search">Adjust opening hours</a>
+        <a href="{{ path('admin_my_fields') }}" class="btn-search">My fields</a>
+    </div>
+
+    <a href="{{ path('app_fields') }}" class="btn-search" style="margin-top: 30px;">Back</a>
+</div>
+{% endblock %}

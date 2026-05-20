@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/tournaments.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div id="tournaments-page">
+    <h1 class="main-title">Add Tournament</h1>
+
+    <form method="post" class="tournament-form">
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Date</label>
+        <input type="date" name="date" required>
+
+        <label>Field</label>
+        <select name="field_id" required>
+            {% for field in fields %}
+                <option value="{{ field.id }}">
+                    {{ field.name }}
+                </option>
+            {% else %}
+                <option disabled>No fields found</option>
+            {% endfor %}
+        </select>
+
+        <button type="submit" class="btn-enroll">
+            Add Tournament
+        </button>
+    </form>
+</div>
+{% endblock %}

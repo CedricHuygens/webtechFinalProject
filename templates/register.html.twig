@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{{ asset('css/baseStyle.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/loginRegister.css') }}" rel="stylesheet" />
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <script defer src="{{ asset('js/register.js') }}"></script>
+    <div class="login">
+        <div class="login-form">
+            <main>
+                <h1>CourtConnect</h1>
+
+                {{ form_start(registerForm) }}
+
+                {{ form_row(registerForm.firstName) }}
+                {{ form_row(registerForm.lastName) }}
+                {{ form_row(registerForm.username) }}
+                <span id="registerUsernameStatusMessage" class="status-message" hidden></span>
+
+                {{ form_row(registerForm.email) }}
+                <span id="registerEmailStatusMessage" class="status-message" hidden></span>
+                <div>
+                {{ form_label(registerForm.password) }}
+                {{ form_widget(registerForm.password) }}
+{#                    In geval dat paswoord niet sterk genoeg is wordt het hier weergegevn in een foutmelding#}
+                {% if registerForm.password.vars.errors|length > 0 %}
+                    {% for error in registerForm.password.vars.errors %}
+                        <span class="status-message error">{{ error.message }}</span>
+                    {% endfor %}
+                {% endif %}
+                </div>
+                {{ form_row(registerForm.passwordCheck) }}
+                <span id="registerPasswordStatusMessage" class="status-message" hidden></span>
+                <label class="show-password-label">
+                    <input id="showPasswordCheckBox" type="checkbox" onclick="showPassword()">
+                    Show Password
+                </label>
+                {{ form_row(registerForm.birthDate) }}
+
+                <button id="form_register" type="submit" disabled>Register</button>
+
+                {{ form_end(registerForm) }}
+                Already have an account? <a href="login">Sign in.</a>
+            </main>
+        </div>
+    </div>
+</body>

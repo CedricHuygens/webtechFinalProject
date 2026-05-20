@@ -1,0 +1,227 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/feed.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="feed-page">
+        <div class="feed-header">
+            <h1 class="feed-title">Matches</h1>
+
+            <div class="feed-actions">
+                <a href="{{ path('app_add_match') }}" class="played-match-button">
+                    Played Match
+                </a>
+
+                <a href="{{ path('app_add_match_request') }}" class="match-request-button">
+                    Match Request
+                </a>
+            </div>
+        </div>
+
+        <div class="feed-container">
+            {% if matches is empty %}
+                <div class="no-matches">
+                    No matches to show.
+                </div>
+            {% else %}
+                {% for match in matches %}
+                    <div class="match-card-wrapper">
+                        <div class="match-card">
+                            <div class="team">
+                                <h3 class="team-title">
+                                    {{ match.team1Name ?? 'Team 1' }}
+                                </h3>
+
+                                {% if match.team1Players is empty %}
+                                    <p class="no-players">No players</p>
+                                {% else %}
+                                    {% for player in match.team1Players %}
+                                        <div class="player">
+                                            {% if player.profilePicture %}
+                                                <img src="{{ asset(player.profilePicture) }}" alt="Profile picture">
+                                            {% endif %}
+
+                                            <span>
+                                                {{ player.firstName }} {{ player.lastName }}
+                                            </span>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+
+                            <div class="match-center">
+                                <div class="score">
+                                    {{ match.team1Score }} - {{ match.team2Score }}
+                                </div>
+
+                                <p class="match-time">
+                                    {{ match.startTime|date('H:i') }} - {{ match.endTime|date('H:i') }}
+                                </p>
+
+                                <p class="match-date">
+                                    {{ match.startTime|date('d/m/Y') }}
+                                </p>
+
+                                {% if match.fieldNumber %}
+                                    <p class="field">
+                                        Court {{ match.fieldNumber }}
+                                    </p>
+                                {% endif %}
+
+                                {% if match.fieldLocation %}
+                                    <p class="location">
+                                        {{ match.fieldLocation }}
+                                    </p>
+                                {% endif %}
+                            </div>
+
+                            <div class="team team-right">
+                                <h3 class="team-title">
+                                    {{ match.team2Name ?? 'Team 2' }}
+                                </h3>
+
+                                {% if match.team2Players is empty %}
+                                    <p class="no-players">No players</p>
+                                {% else %}
+                                    {% for player in match.team2Players %}
+                                        <div class="player player-right">
+                                            <span>
+                                                {{ player.firstName }} {{ player.lastName }}
+                                            </span>
+
+                                            {% if player.profilePicture %}
+                                                <img src="{{ asset(player.profilePicture) }}" alt="Profile picture">
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        <div class="match-social">
+                            <form method="post" action="{{ path('app_match_like', { id: match.id }) }}">
+                                <button type="submit" class="like-button {% if match.likedByCurrentUser %}liked{% endif %}">
+                                    {% if match.likedByCurrentUser %}
+                                        Unlike
+                                    {% else %}
+                                        Like
+                                    {% endif %}
+                                    ({{ match.likesCount }})
+                                </button>
+                            </form>
+
+                            <div class="comments-section">
+                                <h4>Comments</h4>
+
+                                {% if match.comments is empty %}
+                                    <p class="no-comments">No comments yet.</p>
+                                {% else %}
+                                    {% for comment in match.comments %}
+                                        <div class="comment">
+                                            <div class="comment-top">
+                                                <strong class="comment-author">
+                                                    {{ comment.firstName }} {{ comment.lastName }}
+                                                </strong>
+
+                                                <small class="comment-date">
+                                                    {{ comment.createdAt|date('d/m/Y H:i') }}
+                                                </small>
+                                            </div>
+
+                                            <p class="comment-content">
+                                                {{ comment.content }}
+                                            </p>
+
+                                            <div class="comment-actions">
+                                                <form method="post"
+                                                      action="{{ path('app_comment_like', { id: comment.id }) }}"
+                                                      class="comment-like-form">
+                                                    <button type="submit"
+                                                            class="comment-like-button {% if comment.likedByCurrentUser %}liked{% endif %}">
+                                                        {% if comment.likedByCurrentUser %}
+                                                            Unlike
+                                                        {% else %}
+                                                            Like
+                                                        {% endif %}
+                                                        ({{ comment.likesCount }})
+                                                    </button>
+                                                </form>
+                                            </div>
+
+                                            <form method="post"
+                                                  action="{{ path('app_comment_reply', { id: comment.id }) }}"
+                                                  class="reply-form">
+                                                <input type="text"
+                                                       name="content"
+                                                       placeholder="Write a reply..."
+                                                       required>
+
+                                                <button type="submit">
+                                                    Reply
+                                                </button>
+                                            </form>
+
+                                            {% if comment.replies is defined and comment.replies is not empty %}
+                                                <div class="replies">
+                                                    {% for reply in comment.replies %}
+                                                        <div class="comment reply-comment">
+                                                            <div class="comment-top">
+                                                                <strong class="comment-author">
+                                                                    {{ reply.firstName }} {{ reply.lastName }}
+                                                                </strong>
+
+                                                                <small class="comment-date">
+                                                                    {{ reply.createdAt|date('d/m/Y H:i') }}
+                                                                </small>
+                                                            </div>
+
+                                                            <p class="comment-content">
+                                                                {{ reply.content }}
+                                                            </p>
+
+                                                            <div class="comment-actions">
+                                                                <form method="post"
+                                                                      action="{{ path('app_comment_like', { id: reply.id }) }}"
+                                                                      class="comment-like-form">
+                                                                    <button type="submit"
+                                                                            class="comment-like-button {% if reply.likedByCurrentUser %}liked{% endif %}">
+                                                                        {% if reply.likedByCurrentUser %}
+                                                                            Unlike
+                                                                        {% else %}
+                                                                            Like
+                                                                        {% endif %}
+                                                                        ({{ reply.likesCount }})
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endif %}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+
+                                <form method="post"
+                                      action="{{ path('app_match_comment', { id: match.id }) }}"
+                                      class="comment-form">
+                                    <input type="text"
+                                           name="content"
+                                           placeholder="Write a comment..."
+                                           required>
+
+                                    <button type="submit">
+                                        Comment
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

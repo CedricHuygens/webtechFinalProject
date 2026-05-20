@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Padel App{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ asset('css/baseStyle.css') }}">
+
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div class="layout">
+    {% block sidebar %}
+    {% set currentRoute = app.request.attributes.get('_route') %}
+    <nav class="sidebar">
+        <h1><a href="{{ path('app_feed') }}">CourtConnect</a></h1>
+        <ul class="sidebar-top">
+            <li>
+                <a href="{{ path('app_feed') }}"
+                   class="{{ currentRoute == 'app_feed' ? 'active' : '' }}">
+                    Matches
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('app_tournaments') }}"
+                   class="{{ currentRoute == 'app_tournaments' ? 'active' : '' }}">
+                    Tournaments
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('friends') }}"
+                   class="{{ currentRoute == 'friends' ? 'active' : '' }}">
+                    Friends
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('teams') }}"
+                   class="{{ currentRoute == 'teams' ? 'active' : '' }}">
+                    Teams
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('app_fields') }}"
+                   class="{{ currentRoute == 'app_fields' ? 'active' : '' }}">
+                    Fields
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('club_page') }}"
+                   class="{{ currentRoute == 'club_page' ? 'active' : '' }}">
+                    Club
+                </a>
+            </li>
+            {% if is_granted('ROLE_ADMIN') %}
+                <a href="{{ path('admin_field_new') }}"
+                   class="{{ currentRoute == 'admin_field_new' ? 'active' : '' }}">
+                    Field Manager
+                </a>
+            {% endif %}
+        </ul>
+
+        <ul class="sidebar-bottom">
+            <li>
+                <a href="{{ path('app_notifications') }}"
+                   class="{{ currentRoute == 'app_notifications' ? 'active' : '' }}">
+                    Notifications
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('contactInfo') }}"
+                   class="{{ currentRoute == 'contactInfo' ? 'active' : '' }}">
+                    Contact Info
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('profileSettings') }}"
+                   class="{{ currentRoute == 'profileSettings' ? 'active' : '' }}">
+                    Settings
+                </a>
+            </li>
+            <li class="profile">
+                <a href="{{ path('profile') }}"
+                   class="{{ currentRoute == 'profile' ? 'active' : '' }}">
+                    <img
+                        src="{{ asset(app.user.profilePicture ?? 'uploads/profile_pictures/default.png') }}"
+                        alt="Profile picture"
+                        style="max-width:40px;"
+                    >
+                    <span>{{ app.user.firstName }} {{ app.user.lastName }}</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    {% endblock %}
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+</div>
+</body>
+</html>

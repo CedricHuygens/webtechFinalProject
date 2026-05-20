@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+{% block stylesheets %}
+    <link href="{{ asset('css/profile.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+    <script defer src="{{ asset('js/profile.js') }}"></script>
+
+    <div id="profilePage">
+        <div class="profileSquare">
+            <div class="profileHeader">
+                <h2>My Profile</h2>
+                <button id="goToProfileSettingsButton" onclick="window.location.href='{{ path('profileSettings') }}'">✏️ Edit</button>
+            </div>
+
+            <div class="profileContent">
+
+                <img
+                    id="previewImage"
+                    src="{{ asset(profilePicture ?? 'uploads/profile_pictures/default.png')}}" {# asset om juist URL-pad te vinden, zet pad relatief aan public/ #}
+                    alt="Profile picture"
+                />
+
+                <div class="profileInfo">
+                    <p><strong>{{ firstname }} {{ lastname }}</strong></p>
+                    <p>@{{ username }}</p>
+                    <p>{{ email }}</p>
+
+                    <div class="profileStats">
+                        <p>Total Matches: {{ totalMatches }}</p>
+                        <p>Wins: {{ countMatchedWon }}</p>
+                        <p>Losses: {{ countMatchedLost }}</p>
+                        <p>Winrate: {{ winrate }}%</p>
+                        <p>Total Friends: {{ friendsCount }}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

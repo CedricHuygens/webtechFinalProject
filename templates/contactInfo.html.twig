@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+{% block stylesheets %}
+    <link href="{{ asset('css/contactInfo.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+    <div id="profileSettingsPage">
+        <div id="contactCard">
+            <p class="contactText">
+                {% for message in app.flashes('error') %}
+                <div class="status-message">{{ message }}</div>
+                {% endfor %}
+                Are you an owner of a club or do you have other questions?
+            </p>
+            <a class="contactEmail" href="mailto:info@courtconnect.be">
+                info@courtconnect.be
+            </a>
+        </div>
+    </div>
+{% endblock %}

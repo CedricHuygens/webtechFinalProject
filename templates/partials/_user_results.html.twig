@@ -1,0 +1,13 @@
+<div class="searchResultsCard">
+    {% for user in users %}
+        <div class="searchResultRow">
+            <img
+                src="{{ user.profilePicture ?? '/uploads/profile_pictures/default.png' }}"
+                alt="profile"
+                width="40"
+            >
+            <span class="username">{{ user.username }}</span>
+            <button type="button" class="addFriendButton" data-user-id="{{ user.id }}">Add Friend</button> {# data-user-id needed to get userid in JS #}
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,149 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/tournaments.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+<div id="tournaments-page">
+    <h1 class="main-title">Results - {{ tournament.name }}</h1>
+
+    <div class="back-wrapper">
+        <a href="{{ path('app_tournaments') }}" class="btn-back">
+            ← Back to Tournaments
+        </a>
+    </div>
+
+    {% for message in app.flashes('error') %}
+        <div class="flash-error">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    {% if error %}
+        {% if is_granted('ROLE_ADMIN') %}
+            <div class="flash-error">
+                {{ error }}
+            </div>
+
+            <div class="results-container">
+                {% for team in teams %}
+                    <div class="tournament-card-row">
+                        <div class="tournament-info">
+                            <strong class="tournament-name">{{ team.team.name }}</strong>
+                            <span class="tournament-detail">
+                                {{ team.team.user1.firstName }} {{ team.team.user1.lastName }}
+                                &
+                                {{ team.team.user2.firstName }} {{ team.team.user2.lastName }}
+                            </span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p class="empty-message">Results are not available yet.</p>
+        {% endif %}
+
+    {% elseif matches is empty %}
+        {% if is_granted('ROLE_ADMIN') %}
+            <form method="post" class="tournament-form results-form">
+                <input type="hidden" name="action" value="save_semis">
+
+                <h2 class="section-title">Semi-finals</h2>
+
+                <div class="match-block">
+                    <strong>{{ semiFinal1[0].team.name }}</strong>
+                    <input type="number" name="semi1_score_team1" min="0" required>
+                    <span>vs</span>
+                    <input type="number" name="semi1_score_team2" min="0" required>
+                    <strong>{{ semiFinal1[1].team.name }}</strong>
+                </div>
+
+                <div class="match-block">
+                    <strong>{{ semiFinal2[0].team.name }}</strong>
+                    <input type="number" name="semi2_score_team1" min="0" required>
+                    <span>vs</span>
+                    <input type="number" name="semi2_score_team2" min="0" required>
+                    <strong>{{ semiFinal2[1].team.name }}</strong>
+                </div>
+
+                <button type="submit" class="btn-enroll">
+                    Save Semi-finals
+                </button>
+            </form>
+        {% else %}
+            <p class="empty-message">Results are not available yet.</p>
+        {% endif %}
+
+    {% else %}
+
+        {% if finalMatch and finalMatch.winner %}
+            <div class="real-bracket">
+
+                <div class="bracket-team winner-team">
+                    {{ finalMatch.winner.team.name }}
+                </div>
+
+                <div class="bracket-team finalist left-finalist">
+                    <span>{{ finalMatch.team1.team.name }}</span>
+                    <strong>{{ finalMatch.team1Score }}</strong>
+                </div>
+
+                <div class="bracket-team finalist right-finalist">
+                    <strong>{{ finalMatch.team2Score }}</strong>
+                    <span>{{ finalMatch.team2.team.name }}</span>
+                </div>
+
+                <div class="semi-group left-semi">
+                    <div class="bracket-team semi-team left-team-one">
+                        <span>{{ semiMatches[0].team1.team.name }}</span>
+                        <strong>{{ semiMatches[0].team1Score }}</strong>
+                    </div>
+
+                    <div class="bracket-team semi-team left-team-two">
+                        <strong>{{ semiMatches[0].team2Score }}</strong>
+                        <span>{{ semiMatches[0].team2.team.name }}</span>
+                    </div>
+                </div>
+
+                <div class="semi-group right-semi">
+                    <div class="bracket-team semi-team right-team-one">
+                        <span>{{ semiMatches[1].team1.team.name }}</span>
+                        <strong>{{ semiMatches[1].team1Score }}</strong>
+                    </div>
+
+                    <div class="bracket-team semi-team right-team-two">
+                        <strong>{{ semiMatches[1].team2Score }}</strong>
+                        <span>{{ semiMatches[1].team2.team.name }}</span>
+                    </div>
+                </div>
+
+            </div>
+
+        {% elseif finalMatch %}
+            {% if is_granted('ROLE_ADMIN') %}
+                <form method="post" class="tournament-form results-form final-form">
+                    <input type="hidden" name="action" value="save_final">
+
+                    <h2 class="section-title">Final</h2>
+
+                    <div class="match-block">
+                        <strong>{{ finalMatch.team1.team.name }}</strong>
+                        <input type="number" name="final_score_team1" min="0" required>
+                        <span>vs</span>
+                        <input type="number" name="final_score_team2" min="0" required>
+                        <strong>{{ finalMatch.team2.team.name }}</strong>
+                    </div>
+
+                    <button type="submit" class="btn-enroll">
+                        Save Final Result
+                    </button>
+                </form>
+            {% else %}
+                <p class="empty-message">Final result is not available yet.</p>
+            {% endif %}
+        {% endif %}
+
+    {% endif %}
+</div>
+{% endblock %}

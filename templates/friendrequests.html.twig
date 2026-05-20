@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/friends.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+    {# Automatically generated the URL with paht() so that it works on the server#}
+    <script>
+        const searchFriendsUrl = "{{ path('searchFriends') }}";
+        const sendFriendRequestUrl = "{{ path('sendFriendRequest') }}";
+        const cancelFriendRequestUrl = "{{ path('cancelFriendRequest') }}";
+        const acceptFriendRequestUrl = "{{ path('acceptFriendRequest') }}";
+    </script>
+    <script defer src="{{ asset('js/friendrequests.js') }}"></script>
+    <div class="friendRequestPage">
+    <a href="{{ path('friends') }}" id="goToFriendsButton">
+        Go Back
+    </a>
+
+    <form onsubmit="return false;">
+        <input id="searchBarFriends"  placeholder="Find Your Friends" autocomplete="off">
+    </form>
+    <div id="searchResults"></div> {# hier komt dan dynamisch de users tevoorschijn tijdens typen #}
+
+    <div id="overviewFriendRequests">
+        <div id="receivedRequests">
+            <p>Friend Request Received:</p>
+            <div id="receivedRequestsList">
+                {% for request in friendrequestsReceived %}
+                    <div>
+                        <img
+                            src="{{ request.senderUser.profilePicture ?? '/uploads/profile_pictures/default.png' }}"
+                            alt="profile"
+                            width="40"
+                        >
+                        <span class="username">{{ request.senderUser.username }}</span>
+                        <button class="acceptFriendRequestReceivedButton" data-request-id="{{ request.id }}">Accept</button>
+                        <button class="deleteFriendRequestReceivedButton" data-request-id="{{ request.id }}">Delete</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div id="sentRequests">
+            <p>Friend Request Sent:</p>
+            <div id="sentRequestsList">
+                {% for request in friendrequestsSent %}
+                    <div>
+                        <img
+                            src="{{ request.receiverUser.profilePicture ?? '/uploads/profile_pictures/default.png' }}"
+                            alt="profile"
+                            width="40"
+                        >
+                        <span class="username">{{ request.receiverUser.username }}</span>
+                        <button class="cancelFriendRequestSentButton" data-request-id="{{ request.id }}">Cancel</button>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}

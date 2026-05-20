@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/feed.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+    <div class="feed-page">
+        <div class="feed-container">
+            <div class="match-card add-match-card">
+
+                <div class="form-card-header">
+                    <a href="{{ path('app_feed') }}" class="form-back-button">
+                        ← Back
+                    </a>
+
+                    <h2>Add Played Match</h2>
+                </div>
+
+                <form method="post" class="add-match-form">
+                    <div class="form-group">
+                        <label>Start time</label>
+                        <input type="datetime-local" name="start_time" required lang="en">
+                    </div>
+
+                    <div class="form-group">
+                        <label>End time</label>
+                        <input type="datetime-local" name="end_time" required lang="en">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Field</label>
+                        <select name="field_id" required>
+                            {% for field in fields %}
+                                <option value="{{ field.id }}">
+                                    Court {{ field.fieldNumber }} - {{ field.location }}
+                                </option>
+                            {% else %}
+                                <option disabled>No fields available</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Team 1</label>
+                        <select name="team1_id" required>
+                            {% for team in teams %}
+                                <option value="{{ team.id }}">
+                                    {{ team.name }}
+                                    {% if team.user1 and team.user2 %}
+                                        - {{ team.user1.firstName }} {{ team.user1.lastName }}
+                                        &amp;
+                                        {{ team.user2.firstName }} {{ team.user2.lastName }}
+                                    {% endif %}
+                                </option>
+                            {% else %}
+                                <option disabled>No teams available</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Team 2</label>
+                        <select name="team2_id" required>
+                            {% for team in teams %}
+                                <option value="{{ team.id }}">
+                                    {{ team.name }}
+                                    {% if team.user1 and team.user2 %}
+                                        - {{ team.user1.firstName }} {{ team.user1.lastName }}
+                                        &amp;
+                                        {{ team.user2.firstName }} {{ team.user2.lastName }}
+                                    {% endif %}
+                                </option>
+                            {% else %}
+                                <option disabled>No teams available</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Score Team Red</label>
+                        <input type="number" name="team1_score" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Score Team Blue</label>
+                        <input type="number" name="team2_score" min="0" required>
+                    </div>
+
+                    <button type="submit" class="form-submit-button">Save Match</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

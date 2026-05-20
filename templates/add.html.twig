@@ -1,0 +1,135 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/feed.css') }}" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+    <div class="feed-page">
+        <div class="feed-container">
+            <div class="match-card add-match-card">
+
+                <div class="form-card-header">
+                    <a href="{{ path('app_feed') }}" class="form-back-button">
+                        ← Back
+                    </a>
+
+                    <h2>Match Request</h2>
+                </div>
+
+                {% for message in app.flashes('error') %}
+                    <div class="flash-message flash-error">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+                {% for message in app.flashes('success') %}
+                    <div class="flash-message flash-success">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+                <form method="post" class="add-match-form">
+                    <div class="form-group">
+                        <label>Partner</label>
+                        <select name="partner" class="match-request-user-select" required>
+                            <option value="">Select a partner</option>
+                            {% for user in users %}
+                                <option value="{{ user.id }}">
+                                    {{ user.firstName }} {{ user.lastName }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Opponent 1</label>
+                        <select name="opponent1" class="match-request-user-select" required>
+                            <option value="">Select opponent</option>
+                            {% for user in users %}
+                                <option value="{{ user.id }}">
+                                    {{ user.firstName }} {{ user.lastName }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Opponent 2</label>
+                        <select name="opponent2" class="match-request-user-select" required>
+                            <option value="">Select opponent</option>
+                            {% for user in users %}
+                                <option value="{{ user.id }}">
+                                    {{ user.firstName }} {{ user.lastName }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" name="date" required lang="en">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Field</label>
+                        <select name="field_id" required>
+                            <option value="">Select a field</option>
+                            {% for field in fields %}
+                                <option value="{{ field.id }}">
+                                    Court {{ field.fieldNumber }} - {{ field.location }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <button type="submit" class="form-submit-button">
+                        Send Request
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const userSelects = document.querySelectorAll('.match-request-user-select');
+
+            function updateUserDropdowns() {
+                const selectedValues = Array.from(userSelects)
+                    .map(function (select) {
+                        return select.value;
+                    })
+                    .filter(function (value) {
+                        return value !== '';
+                    });
+
+                userSelects.forEach(function (select) {
+                    const currentValue = select.value;
+
+                    select.querySelectorAll('option').forEach(function (option) {
+                        if (option.value === '') {
+                            option.hidden = false;
+                            option.disabled = false;
+                            return;
+                        }
+
+                        const alreadySelectedSomewhereElse =
+                            selectedValues.includes(option.value) &&
+                            option.value !== currentValue;
+
+                        option.hidden = alreadySelectedSomewhereElse;
+                        option.disabled = alreadySelectedSomewhereElse;
+                    });
+                });
+            }
+
+            userSelects.forEach(function (select) {
+                select.addEventListener('change', updateUserDropdowns);
+            });
+
+            updateUserDropdowns();
+        });
+    </script>
+{% endblock %}
