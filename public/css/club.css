@@ -1,0 +1,195 @@
+.club-page {
+    position: relative; /* voor future buttons */
+    min-height: 100vh;
+    background: linear-gradient(to right, white, #0E9594);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.club-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 16px;
+    width: 800px;
+    max-width: 95%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.club-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #0E9594;
+}
+
+.club-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.club-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: white;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.club-card:hover {
+    transform: translateY(-2px);
+}
+
+.club-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.club-user-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.club-user-email {
+    font-size: 13px;
+    color: #666;
+}
+
+.club-user-date {
+    font-size: 12px;
+    color: #999;
+}
+
+.club-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    background: #0E9594;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.club-btn:hover {
+    background: #0b7f7e;
+}
+
+.club-empty {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+}
+
+.club-card-me {
+    background: linear-gradient(135deg, #0E9594, #17c3b2);
+    color: white;
+    border: 2px solid white;
+}
+
+.club-card-me .club-user-email,
+.club-card-me .club-user-date {
+    color: rgba(255,255,255,0.85);
+}
+
+.me-badge {
+    margin-left: 8px;
+    font-size: 12px;
+    background: white;
+    color: #0E9594;
+    padding: 2px 7px;
+    border-radius: 999px;
+}
+
+.club-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.club-remove-btn,
+.club-leave-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 9px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.club-remove-btn {
+    background: #F2542D;
+    color: white;
+}
+
+.club-remove-btn:hover,
+.club-leave-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.club-leave-btn {
+    background: white;
+    color: #0E9594;
+}
+
+.club-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.club-remove-btn,
+.club-leave-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 9px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.club-remove-btn {
+    background: #F2542D;
+    color: white;
+}
+
+.club-remove-btn:hover,
+.club-leave-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.club-leave-btn {
+    background: white;
+    color: #0E9594;
+}
+
+.club-join-btn {
+    border: none;
+    border-radius: 999px;
+    padding: 10px 22px;
+    font-weight: 700;
+    font-size: 14px;
+
+    background: linear-gradient(135deg, #0E9594, #17c3b2);
+    color: white;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    box-shadow: 0 4px 10px rgba(14,149,148,0.25);
+}
+
+.club-join-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 18px rgba(14,149,148,0.35);
+
+    background: linear-gradient(135deg, #0b7f7e, #14b8a6);
+}

@@ -1,0 +1,235 @@
+.friendsPage, .friendRequestPage {
+    background: linear-gradient(to right, #ffffff, #0E9594);
+    min-height: 100vh;
+}
+
+.friendRequestPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 20px
+}
+
+form {
+    width: 520px;
+    padding: 0 16px;
+    position: relative;
+}
+
+#searchBarFriends {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 16px 13px 45px;
+    border: none;
+    border-radius: 16px;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.82);
+}
+
+#searchBarFriends::placeholder {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+#searchResults,
+#overviewFriendRequests,
+#overviewFriends{
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 16px 32px;
+}
+
+#overviewFriendRequests,
+#overviewFriends {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+#sentRequests,
+#receivedRequests,
+#friendList {
+    background: rgba(255, 255, 255, 0.55);
+    border: 0.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+#sentRequests  p,
+#receivedRequests  p,
+#friendList {
+    padding: 14px 18px 11px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.4);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.07);
+    margin: 0;
+}
+
+#sentRequestsList  div,
+#receivedRequestsList  div,
+#friendList div{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+}
+
+#sentRequestsList img,
+#receivedRequestsList img,
+#friendList img{
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+#overviewFriendRequests button,
+#overviewFriends button,
+#goToFriendRequestButton,
+#goToFriendsButton{
+    border: 0.5px solid rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #333;
+    transition: background 0.12s;
+    margin-left: auto;
+}
+
+#overviewFriendRequests button:hover,
+overviewFriends button:hover
+#goToFriendRequestButton:hover,
+#goToFriendsButton{
+    background: rgba(255, 255, 255, 0.9);
+}
+
+#goToFriendRequestButton,
+#goToFriendsButton {
+    text-decoration: none; /* underline weg */
+    color: #0b6e6e;
+    font-weight: 500;
+}
+
+#goToFriendRequestButton:hover,
+#goToFriendsButton:hover {
+    color: #064e4e; /* iets donkerder bij hover */
+}
+
+#goToFriendsButton {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+/* omdat er al regels zijn voor button die specifieker zijn moet hier !important worden gebruikt om het conflict te kunnen winnen */
+.acceptFriendRequestReceivedButton {
+    color: #0b6e4f !important;
+    border-color: rgba(14, 149, 148, 0.35) !important;
+    background: rgba(14, 149, 148, 0.1) !important;
+    margin-left: auto !important;
+}
+
+.acceptFriendRequestReceivedButton:hover {
+    background: rgba(14, 149, 148, 0.2) !important;
+}
+
+.deleteFriendRequestReceivedButton,
+.deleteFriendButton{
+    color: #b02020 !important;
+    border-color: rgba(176, 32, 32, 0.25) !important;
+    background: rgba(176, 32, 32, 0.07) !important;
+}
+
+.deleteFriendRequestReceivedButton:hover,
+.deleteFriendButton:hover{
+    background: rgba(176, 32, 32, 0.14) !important;
+}
+
+#searchResults {
+    max-width: 520px;
+    margin: 0 auto 20px;
+    padding: 0 16px;
+}
+
+#searchResults:empty {
+    display: none;
+}
+
+.searchResultsCard {
+    background: rgba(255, 255, 255, 0.55);
+    border: 0.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 18px;
+    overflow: hidden;
+    width: 520px;
+}
+
+.searchResultRow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+}
+
+.searchResultRow:last-child {
+    border-bottom: none;
+}
+
+#searchResults img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.addFriendButton {
+    border: 0.5px solid rgba(14, 149, 148, 0.4);
+    background: rgba(14, 149, 148, 0.1);
+    border-radius: 8px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "HalyardDisplay", sans-serif;
+    cursor: pointer;
+    color: #0b6e6e;
+    transition: background 0.12s, opacity 0.12s;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.addFriendButton:hover {
+    background: rgba(14, 149, 148, 0.2);
+}
+
+.addFriendButton:disabled {
+    opacity: 0.5;
+    cursor: default;
+    background: rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #555;
+}
+
+#sentRequestsList .username,
+#receivedRequestsList .username {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.searchResultRow .username {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+.friendsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

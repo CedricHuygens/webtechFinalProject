@@ -1,0 +1,147 @@
+.teamsPage {
+    background: linear-gradient(to right, #ffffff, #0E9594);
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Verticale centrering */
+    justify-content: flex-start; /* Horizontale centrering */
+    gap: 20px;
+}
+.teamForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 12px;
+}
+.teamForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.teamForm button {
+    background: rgba(14, 150, 148, 0.9);
+    color: white;
+    border: black solid 2px;
+    cursor: pointer;
+    font-family: "HalyardDisplay";
+    font-size: 16px;
+    font-weight: bold;
+    transition-duration: 0.4s; /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+}
+.teamForm input,
+.teamForm button {
+    width: 400px;
+    font-family: "HalyardDisplay";
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.teamForm button {
+    background: rgba(14, 150, 148, 0.9);
+    color: white;
+    border: black solid 2px;
+    cursor: pointer;
+    font-family: "HalyardDisplay";
+    font-size: 16px;
+    font-weight: bold;
+    transition-duration: 0.4s; /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+}
+.teamForm button[disabled] {
+    background: inherit;
+    color: black;
+    transition-duration: 0.4s; /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+}
+.teamForm button:not([disabled]):hover {
+    width: 80%;
+    border: black solid 2px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6); /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+    cursor: pointer;
+}
+.teamsList {
+    display: flex;
+    flex-direction: grid;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.team {
+    padding: 40px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.team h3 {
+    font-family: "Basset_five";
+}
+.teamsPage hr {
+    width: 100%;
+    height: 3px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #ffffff, darkgray);;
+}
+.teamsPage .teamMemberInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.team .teamInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.team .teamInfo .teamMateInfo #username {
+    font-style: italic;
+}
+.team .teamInfo h3 {}
+.team img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+.team a {
+    text-decoration: none;
+    color: white;
+    background: rgba(242, 84, 45, 0.9);
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    border: black solid 2px;
+    box-sizing: border-box;
+    transition-duration: 0.4s;
+}
+.team a:hover {
+    transform: scale(1.05);
+    border: black solid 2px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6); /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+    cursor: pointer;
+}
+.status-message {
+    list-style: none;
+    display: block;
+    width: 400px;
+    text-align: left;
+    margin-top: -5px;
+    font-size: 14px;
+    padding-bottom: 5px;
+    color: rgba(242, 84, 45);
+}
+.status-message[hidden] {
+    display: none;
+}

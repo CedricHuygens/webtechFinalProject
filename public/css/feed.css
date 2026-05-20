@@ -1,0 +1,582 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Page background */
+.feed-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    background: linear-gradient(to right, white, #0E9594);
+}
+
+/* Header */
+.feed-header {
+    max-width: 1100px;
+    margin: 0 auto 25px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.feed-title,
+.feed-header h1 {
+    margin: 0;
+    font-family: "Basset_seven", sans-serif;
+    font-size: 34px;
+    color: black;
+}
+
+/* Header buttons */
+.feed-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.played-match-button,
+.match-request-button {
+    min-width: 185px;
+    height: 56px;
+    padding: 0 22px;
+    border-radius: 18px;
+    font-family: "HalyardDisplay", sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 2px solid #d9f4f4;
+    color: #003049;
+    background: linear-gradient(135deg, white 0%, #d9f4f4 55%, #a8dfdf 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease;
+}
+
+.played-match-button:hover,
+.match-request-button:hover {
+    background: #0E9594;
+    color: white;
+    border-color: #0E9594;
+    transform: translateY(-2px);
+    text-decoration: none;
+    opacity: 1;
+}
+
+/* Main content */
+.feed-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.match-card-wrapper {
+    margin-bottom: 22px;
+}
+
+/* Match card */
+.match-card {
+    background: white;
+    border-radius: 12px 12px 0 0;
+    padding: 24px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.team {
+    width: 32%;
+}
+
+.team-right {
+    text-align: right;
+}
+
+.team-title {
+    margin: 0 0 12px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.player-right {
+    justify-content: flex-end;
+}
+
+.player img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.match-center {
+    width: 36%;
+    text-align: center;
+}
+
+.score {
+    margin-bottom: 14px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.match-time,
+.match-date,
+.field,
+.location,
+.time {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.no-players,
+.no-matches {
+    color: #555;
+    font-size: 14px;
+}
+
+.no-matches {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Forms */
+.add-match-card {
+    max-width: 800px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.add-match-card h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.form-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.form-card-header h2 {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    font-size: 28px;
+}
+
+.form-card-header::after {
+    content: "";
+    min-width: 125px;
+}
+
+.form-back-button {
+    min-width: 125px;
+    height: 42px;
+    padding: 0 16px;
+    border-radius: 14px;
+    font-family: "HalyardDisplay", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 2px solid #d9f4f4;
+    color: #003049;
+    background: linear-gradient(135deg, white 0%, #d9f4f4 55%, #a8dfdf 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.2s ease;
+}
+
+.form-back-button:hover {
+    background: #0E9594;
+    color: white;
+    border-color: #0E9594;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.add-match-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.add-match-form label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.add-match-form input,
+.add-match-form select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    font-family: "HalyardDisplay", sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.form-submit-button {
+    width: fit-content;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 12px;
+    background: #0E9594;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.form-submit-button:hover {
+    background: #087978;
+    transform: translateY(-1px);
+}
+
+/* Social block */
+.match-social {
+    background: white;
+    border-radius: 0 0 12px 12px;
+    margin-top: -10px;
+    padding: 18px 24px 24px 24px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Like buttons */
+.like-button,
+.comment-like-button {
+    padding: 8px 14px;
+    border: 1px solid #d0dbe8;
+    border-radius: 18px;
+    background: white;
+    color: #003049;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.like-button {
+    margin-bottom: 15px;
+}
+
+.like-button:hover,
+.comment-like-button:hover {
+    background: #e8fafa;
+    transform: translateY(-1px);
+}
+
+.like-button.liked,
+.comment-like-button.liked {
+    background: #0E9594;
+    color: white;
+    border-color: #0E9594;
+}
+
+/* Comments */
+.comments-section {
+    margin-top: 10px;
+}
+
+.comments-section h4 {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+}
+
+.comment {
+    background: #f8f9fb;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    border: 1px solid #e5eaf0;
+}
+
+.comment-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.comment-author {
+    font-size: 15px;
+    font-weight: 700;
+    color: #003049;
+}
+
+.comment-date {
+    color: #666;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.comment-content {
+    margin: 8px 0 12px 0;
+    color: #222;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.comment-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.comment-like-form {
+    margin: 0;
+}
+
+.no-comments {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Add comment form */
+.comment-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.comment-form input {
+    flex: 1;
+    min-width: 220px;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.comment-form button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    background: #0E9594;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.comment-form button:hover {
+    background: #087978;
+    transform: translateY(-1px);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .feed-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .match-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team,
+    .match-center {
+        width: 100%;
+    }
+
+    .team-right {
+        text-align: center;
+    }
+
+    .player,
+    .player-right {
+        justify-content: center;
+    }
+
+    .comment-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .feed-page {
+        padding: 20px 12px;
+    }
+
+    .feed-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feed-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .played-match-button,
+    .match-request-button {
+        width: 100%;
+        min-width: unset;
+        height: 54px;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .feed-title,
+    .feed-header h1 {
+        font-size: 28px;
+    }
+
+    .match-card {
+        padding: 18px;
+    }
+
+    .score {
+        font-size: 32px;
+    }
+
+    .form-card-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-card-header h2 {
+        text-align: center;
+    }
+
+    .form-card-header::after {
+        display: none;
+    }
+
+    .form-back-button {
+        width: 100%;
+    }
+
+    .comment-form {
+        flex-direction: column;
+    }
+
+    .comment-form input,
+    .comment-form button {
+        width: 100%;
+    }
+
+    .comment-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .comment-like-button {
+        width: 100%;
+    }
+    /* Replies */
+    .replies {
+        margin-top: 12px;
+        margin-left: 28px;
+        padding-left: 16px;
+        border-left: 3px solid #d9f4f4;
+    }
+
+    .reply-comment {
+        background: #ffffff;
+        margin-bottom: 10px;
+    }
+
+    .reply-form {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+        flex-wrap: wrap;
+    }
+
+    .reply-form input {
+        flex: 1;
+        min-width: 220px;
+        padding: 10px 12px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .reply-form button {
+        padding: 10px 16px;
+        border: none;
+        border-radius: 10px;
+        background: #0E9594;
+        color: white;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.2s ease;
+    }
+
+    .reply-form button:hover {
+        background: #087978;
+        transform: translateY(-1px);
+    }
+
+    @media (max-width: 600px) {
+        .replies {
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+
+        .reply-form {
+            flex-direction: column;
+        }
+
+        .reply-form input,
+        .reply-form button {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+header {
+    font-family: "Basset_seven";
+}
+.login-form h1 {
+    font-family: "Basset_four";
+}
+.login {
+    display: flex;
+    align-items: center; /* Verticale centrering */
+    justify-content: center; /* Horizontale centrering */
+    background: linear-gradient(135deg,rgba(242, 84, 45, 0.9) 0%, rgba(14, 150, 148, 0.8) 60%);
+    min-height: 100vh; /* 100% van zichtbare browserhoogte */
+}
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: antiquewhite;
+    border-radius: 12px;
+}
+.login-form form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+ }
+
+
+.login-form label {
+    display: block;
+    text-align: left;
+    font-family: "HalyardDisplay";
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+/* Submit */
+.login-form button {
+    background: rgba(14, 150, 148, 0.9);
+    color: white;
+    border: black solid 2px;
+    cursor: pointer;
+    font-family: "HalyardDisplay";
+    font-size: 16px;
+    font-weight: bold;
+    transition-duration: 0.4s; /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+}
+.login-form button[disabled] {
+    background: inherit;
+    color: black;
+    transition-duration: 0.4s; /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+}
+.login-form button:hover {
+    width: 100%;
+    border: black solid 2px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6); /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+    cursor: pointer;
+}
+.login-form input,
+.login-form select,
+.login-form textarea,
+.login-form button {
+    width: 400px;
+    font-family: "HalyardDisplay";
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+/* Submit */
+.login-form button {
+    background: rgba(14, 150, 148, 0.9);
+    color: white;
+    border: black solid 2px;
+    cursor: pointer;
+    font-family: "HalyardDisplay";
+    font-size: 16px;
+    font-weight: bold;
+    transition-duration: 0.4s; /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+}
+.login-form button[disabled] {
+    background: inherit;
+    color: black;
+    transition-duration: 0.4s; /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+}
+.login-form button:hover {
+    width: 100%;
+    border: black solid 2px;
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.6); /* Inspiration from W3Schools (https://www.w3schools.com/css/css3_buttons_hover.asp) */
+    cursor: pointer;
+}
+
+.status-message, .alert.alert-danger {
+    list-style: none;
+    display: block;
+    width: 400px;
+    text-align: left;
+    margin-top: -5px;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+.alert.alert-danger {
+    color: rgba(242, 84, 45);
+}
+.status-message.error {
+    color: rgba(242, 84, 45);
+}
+.status-message.success {
+    color: rgba(14, 150, 148);
+}
+.status-message[hidden] {
+    display: none;
+}
+.login-form label.show-password-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    width: 400px;
+    align-self: auto;
+}
+.login-form input[type="checkbox"] {
+    width: auto !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}

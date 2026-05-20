@@ -1,0 +1,66 @@
+#profilePage {
+    min-height: 100vh;
+    background: linear-gradient(to right, #ffffff, #0E9594);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileSquare {
+    background: rgba(255, 255, 255, 0.55);
+    padding: 30px;
+    border-radius: 20px;
+    width: 700px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.profileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-header h2 {
+    margin: 0;
+}
+
+#goToProfileSettingsButton {
+    border: 0.5px solid rgba(0, 0, 0, 0.15);
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 5px 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #0b6e6e;
+    cursor: pointer;
+    transition: background 0.12s;
+}
+
+#goToProfileSettingsButton:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #064e4e;
+}
+
+.profileContent {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#previewImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileInfo p {
+    margin: 5px 0;
+}
+
+.profileStats {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}

@@ -1,0 +1,129 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "HalyardDisplay", sans-serif;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+/* Fonts */
+@font-face {
+    font-family: "HalyardDisplay";
+    src: url("../fonts/HalyardDisplay_light.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Basset_one";
+    src: url("../fonts/Basset_one.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Basset_four";
+    src: url("../fonts/Basset_four.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Basset_five";
+    src: url("../fonts/Basset_five.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Basset_six";
+    src: url("../fonts/Basset_six.otf") format("opentype");
+}
+
+
+/* Layout */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+    background: rgba(255, 255, 255, 0.6);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 20px 10px;
+    z-index: 10;
+}
+
+.sidebar h1 {
+    margin: 0 0 20px 0;
+    text-align: center;
+
+}
+
+.sidebar h1 a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: "Basset_four";
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    display: block;
+    padding: 8px 12px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.sidebar-top,
+.sidebar-bottom {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-bottom {
+    margin-top: auto;
+    padding-bottom: 40px;
+}
+
+.sidebar-top a:hover,
+.sidebar-bottom a:hover {
+    transform: scale(1.05);
+}
+
+.sidebar a.active {
+    background-color: #0E9594;
+    border-radius: 10px;
+    color: white;
+}
+
+.profile a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+/* Main content */
+.main-content {
+    margin-left: 200px;
+    position: relative;
+    padding-left: 20px;
+    width: calc(100% - 200px);
+}

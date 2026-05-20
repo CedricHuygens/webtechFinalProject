@@ -1,0 +1,34 @@
+#profileSettingsPage {
+    min-height: 100vh;
+    background: linear-gradient(to right, #ffffff, #0E9594);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contactCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 420px;
+    width: 100%;
+    margin: 40px;
+    padding: 35px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.contactText {
+    font-size: 16px;
+    color: #333;
+}
+
+.contactEmail:hover {
+    background: rgba(14, 149, 148, 0.2);
+}
+.status-message {
+    color: rgba(242, 84, 45);
+}
